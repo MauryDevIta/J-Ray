@@ -1,0 +1,63 @@
+/* Colori base del testo */
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #a5b4fc;
+    /* Indaco chiaro di base */
+    text-shadow: none;
+    font-family: 'JetBrains Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    tab-size: 2;
+    hyphens: none;
+}
+
+/* Scrollbar invisibile ma funzionale */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+/* === SINTASSI JSON === */
+
+/* Le Chiavi (es. "nome":) - Viola chiaro */
+.token.property {
+    color: #c084fc;
+}
+
+/* Le Stringhe (es. "Mario") - Verde Smeraldo */
+.token.string {
+    color: #4ade80;
+}
+
+/* I Numeri (es. 123) - Arancione */
+.token.number {
+    color: #fb923c;
+}
+
+/* I Booleani (true/false) - Rosso/Rosa */
+.token.boolean {
+    color: #f472b6;
+    font-weight: bold;
+}
+
+/* Punteggiatura ({ } [ ] ,) - Grigio scuro */
+.token.punctuation {
+    color: #71717a;
+}
+
+/* Operatori (:) - Bianco */
+.token.operator {
+    color: #ffffff;
+}

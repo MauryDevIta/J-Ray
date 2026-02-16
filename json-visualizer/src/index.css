@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #020617;
+  /* Slate 950 per profondità spaziale */
+  --accent: #6366f1;
+  /* Indigo 500 */
+  --x: 50%;
+  /* Default spotlight X */
+  --y: 50%;
+  /* Default spotlight Y */
+}
+
+/* Base setup */
+html {
+  /* Permettiamo lo scroll solo se necessario (per la Landing) */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: #e4e4e7;
+  font-family: 'Inter', sans-serif;
+  /* Rimuoviamo overflow: hidden globale per far scorrere la Landing */
+}
+
+/* --- EFFETTI ANTI-GRAVITY & LANDING --- */
+
+.cyber-bg {
+  position: relative;
+  background-color: #020617;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x) var(--y),
+      rgba(99, 102, 241, 0.12) 0%,
+      rgba(0, 0, 0, 0) 60%);
+  z-index: 10;
+}
+
+/* --- LOGICA VISUALIZER (REACT FLOW) --- */
+
+/* Quando siamo nell'app (/app), vogliamo bloccare lo scroll della pagina */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.react-flow__edge-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 1.5s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.react-flow__edge path {
+  stroke-width: 2;
+  filter: drop-shadow(0 0 3px rgba(99, 102, 241, 0.4));
+}
+
+/* Scrollbar stile "Developer" (Sottile e scura) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* ... il tuo CSS precedente ... */
+
+@keyframes scanline {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+.bg-grid {
+  background-size: 30px 30px;
+  background-image:
+    linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #6366f1;
+  transform-origin: 0%;
+  z-index: 100;
+  box-shadow: 0 0 15px #6366f1;
+}
