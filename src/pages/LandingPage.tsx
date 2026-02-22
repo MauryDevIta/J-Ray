@@ -118,6 +118,17 @@ const translations = {
             card_3: "Licenza Perpetua",
             desc_3: "Paga una volta sola su Lemon Squeezy, usalo per sempre. La chiave di licenza viene salvata localmente nel tuo vault criptato."
         },
+        feedback: {
+            title: "INVIA IL TUO",
+            subtitle: "FEEDBACK",
+            desc: "Bug report? Richieste per nuove feature? Lascia un messaggio ai sistemi centrali. Leggiamo tutto.",
+            email_ph: "Tua Email (opzionale per ricevere risposte)",
+            msg_ph: "Scrivi il tuo messaggio qui...",
+            btn_idle: "TRASMETTI DATI 🚀",
+            btn_sending: "TRASMISSIONE...",
+            success: "Ricevuto! Grazie per il supporto. 📡",
+            error: "Errore di trasmissione. Riprova più tardi."
+        },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     },
     en: {
@@ -182,6 +193,17 @@ const translations = {
             card_3: "Perpetual License",
             desc_3: "Pay once via Lemon Squeezy, use it forever. Your license key is securely stored in your local encrypted vault."
         },
+        feedback: {
+            title: "SEND YOUR",
+            subtitle: "FEEDBACK",
+            desc: "Found a bug? Have a feature request? Leave a message to the central systems. We read everything.",
+            email_ph: "Your Email (optional, if you want a reply)",
+            msg_ph: "Type your message here...",
+            btn_idle: "TRANSMIT DATA 🚀",
+            btn_sending: "TRANSMITTING...",
+            success: "Received! Thank you for the support. 📡",
+            error: "Transmission error. Try again later."
+        },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     }
 };
@@ -191,6 +213,12 @@ export default function LandingPage() {
     const [isHeroReady, setIsHeroReady] = useState(false);
     const [demoStep, setDemoStep] = useState(0);
     const [session, setSession] = useState<any>(null);
+
+    // Gestione Feedback
+    const [feedbackMsg, setFeedbackMsg] = useState('');
+    const [feedbackEmail, setFeedbackEmail] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
     const { lang, setLang } = useLanguage();
     const navigate = useNavigate();
@@ -209,6 +237,31 @@ export default function LandingPage() {
         await supabase.auth.signOut();
         setSession(null);
         navigate('/');
+    };
+
+    const submitFeedback = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!feedbackMsg.trim()) return;
+
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        const { error } = await supabase
+            .from('feedbacks')
+            .insert([{ message: feedbackMsg, email: feedbackEmail || null }]);
+
+        setIsSubmitting(false);
+
+        if (error) {
+            console.error("Feedback error:", error);
+            setSubmitStatus('error');
+        } else {
+            setSubmitStatus('success');
+            setFeedbackMsg('');
+            setFeedbackEmail('');
+            // Nasconde il messaggio di successo dopo 5 secondi
+            setTimeout(() => setSubmitStatus('idle'), 5000);
+        }
     };
 
     useEffect(() => {
@@ -383,7 +436,7 @@ export default function LandingPage() {
                 </motion.div>
             </section>
 
-            {/* --- INTERACTIVE DEMO (ANIMAZIONE RIPRISTINATA) --- */}
+            {/* --- INTERACTIVE DEMO --- */}
             <section id="demo" className="py-32 px-6 relative z-20 max-w-7xl mx-auto border-t border-white/5">
                 <motion.div
                     initial="hidden"
@@ -398,7 +451,6 @@ export default function LandingPage() {
                             {t.demo.desc}
                         </p>
 
-                        {/* Indicatori Steps */}
                         <div className="space-y-4">
                             <div className="flex items-center gap-4 text-zinc-500 font-mono text-xs">
                                 <motion.div
@@ -423,11 +475,9 @@ export default function LandingPage() {
                         </div>
                     </div>
 
-                    {/* SIMULATORE GRAFICO ANIMATO */}
                     <div className="relative aspect-video bg-[#020617] rounded-[50px] border border-white/5 overflow-hidden shadow-2xl flex items-center justify-center">
                         <div className="absolute inset-0 bg-grid opacity-10" />
 
-                        {/* SVG LINEE */}
                         <svg className="absolute inset-0 w-full h-full pointer-events-none">
                             <AnimatePresence>
                                 {demoStep >= 3 && (
@@ -455,9 +505,7 @@ export default function LandingPage() {
                             </AnimatePresence>
                         </svg>
 
-                        {/* CONTENITORE NODI */}
                         <div className="absolute inset-0">
-                            {/* Overlay Input */}
                             <AnimatePresence mode='wait'>
                                 {(demoStep === 0 || demoStep === 1) && (
                                     <motion.div
@@ -482,9 +530,7 @@ export default function LandingPage() {
                                 )}
                             </AnimatePresence>
 
-                            {/* NODI */}
                             <AnimatePresence>
-                                {/* NODO PADRE */}
                                 {demoStep >= 2 && (
                                     <motion.div
                                         key="node-core"
@@ -499,7 +545,6 @@ export default function LandingPage() {
                                     </motion.div>
                                 )}
 
-                                {/* NODO FIGLIO SINISTRO */}
                                 {demoStep >= 3 && (
                                     <motion.div
                                         key="node-1"
@@ -514,7 +559,6 @@ export default function LandingPage() {
                                     </motion.div>
                                 )}
 
-                                {/* NODO FIGLIO DESTRO */}
                                 {demoStep >= 4 && (
                                     <motion.div
                                         key="node-2"
@@ -530,7 +574,6 @@ export default function LandingPage() {
                                 )}
                             </AnimatePresence>
                         </div>
-
                         <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent h-[20%] w-full animate-scanline" />
                     </div>
                 </motion.div>
@@ -581,6 +624,61 @@ export default function LandingPage() {
                             </div>
                         </div>
                     </div>
+                </motion.div>
+            </section>
+
+            {/* --- FEEDBACK SECTION (NUOVA) --- */}
+            <section className="py-24 px-6 relative z-20 max-w-3xl mx-auto border-t border-white/5">
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants} className="bg-black/40 border border-white/10 rounded-[40px] p-8 md:p-12 backdrop-blur-md relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
+
+                    <div className="text-center mb-8 relative z-10">
+                        <h2 className="text-3xl md:text-4xl font-black uppercase italic tracking-tighter mb-4">
+                            {t.feedback.title} <span className="text-indigo-400">{t.feedback.subtitle}</span>
+                        </h2>
+                        <p className="text-zinc-400 text-sm">{t.feedback.desc}</p>
+                    </div>
+
+                    <form onSubmit={submitFeedback} className="relative z-10 flex flex-col gap-4">
+                        <input
+                            type="email"
+                            placeholder={t.feedback.email_ph}
+                            value={feedbackEmail}
+                            onChange={(e) => setFeedbackEmail(e.target.value)}
+                            className="bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all font-mono text-sm placeholder:text-zinc-600 w-full"
+                        />
+                        <textarea
+                            required
+                            rows={4}
+                            placeholder={t.feedback.msg_ph}
+                            value={feedbackMsg}
+                            onChange={(e) => setFeedbackMsg(e.target.value)}
+                            className="bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all font-mono text-sm placeholder:text-zinc-600 w-full resize-none"
+                        ></textarea>
+
+                        <div className="mt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className={`w-full sm:w-auto px-8 py-4 rounded-xl font-black italic tracking-wide transition-all shadow-[0_0_20px_rgba(79,70,229,0.2)] ${isSubmitting ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white hover:scale-105'}`}
+                            >
+                                {isSubmitting ? t.feedback.btn_sending : t.feedback.btn_idle}
+                            </button>
+
+                            <AnimatePresence mode="wait">
+                                {submitStatus === 'success' && (
+                                    <motion.span initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }} className="text-green-400 text-sm font-bold tracking-wide">
+                                        {t.feedback.success}
+                                    </motion.span>
+                                )}
+                                {submitStatus === 'error' && (
+                                    <motion.span initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }} className="text-red-400 text-sm font-bold tracking-wide">
+                                        {t.feedback.error}
+                                    </motion.span>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </form>
                 </motion.div>
             </section>
 
