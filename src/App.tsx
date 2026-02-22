@@ -6,6 +6,8 @@ import Visualizer from './Visualizer';
 import LandingPage from './pages/LandingPage';
 import { LanguageProvider } from './context/LanguageContext';
 import EmailConfirmed from './pages/EmailConfirmed';
+import TermsPage from './pages/TermsPage';
+import PricingPage from './pages/PricingPage';
 
 export default function App() {
     const [session, setSession] = useState<any>(null);
@@ -41,6 +43,8 @@ export default function App() {
                     <Route path="/login" element={!session ? <Login /> : <Navigate to="/app" replace />} />
                     <Route path="/app" element={<Visualizer />} />
                     <Route path="/auth/confirmed" element={<EmailConfirmed />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </BrowserRouter>

@@ -60,68 +60,63 @@ const translations = {
         nav: {
             console: "CONSOLE",
             logout: "LOGOUT_",
-            launch: "LANCIA_CONSOLE_"
+            launch: "WEB DEMO",
+            pricing: "PRICING",
+            docs: "DOCS"
         },
         hero: {
             init: "[ Inizializzazione_Protocollo_J-RAY ]",
             title: "DOMINA IL CAOS",
             subtitle: "DEI TUOI DATI.",
-            desc: "Il visualizzatore JSON per chi non accetta il disordine.\nMappe neurali, layout istantanei, controllo totale.",
-            cta: "LOGS_FILES ↓"
+            desc: "Il visualizzatore JSON per chi non accetta il disordine.\nMappe neurali, decriptazione token, Live API Radar e molto altro.",
+            cta: "ESPLORA LE FUNZIONI ↓"
         },
         features: {
             title: "POTENZA PURA",
             subtitle: "SOTTO IL COFANO.",
             f1_title: "Parsing Real-Time",
-            f1_desc: "Modifica il JSON e vedi il grafo mutare istantaneamente. Zero latenza.",
-            f2_title: "Export 4K",
-            f2_desc: "Esporta diagrammi ad alta risoluzione pronti per le tue presentazioni o documentazione.",
-            f3_title: "Neural Layout",
-            f3_desc: "Algoritmi di posizionamento intelligenti che districano anche i nodi più complessi.",
-            f4_title: "Privacy First",
-            f4_desc: "Tutto gira nel tuo browser. I tuoi dati non lasciano mai la tua macchina."
+            f1_desc: "Modifica il JSON e vedi il grafo mutare istantaneamente. Il motore Nitro in Rust garantisce zero latenza anche su file enormi.",
+            f2_title: "Smart Stack",
+            f2_desc: "Array con migliaia di elementi? J-RAY li comprime automaticamente in pacchetti da 50 per non far esplodere la tua RAM.",
+            f3_title: "X-Ray Decrypter",
+            f3_desc: "Hai trovato un Token JWT o una stringa Base64 nel JSON? Clicca il lucchetto e decriptalo al volo senza usare tool esterni.",
+            f4_title: "Type Code Gen",
+            f4_desc: "Genera automaticamente le interfacce TypeScript, le struct Rust o i modelli Pydantic Python partendo dal tuo JSON."
         },
-        architecture: {
-            title: "ARCHITETTURA",
-            subtitle: "ZERO TRUST",
-            card_1: "Client-Side Processing",
-            desc_1: "Il motore di rendering gira via WebAssembly direttamente sulla tua CPU. Nessun dato viene inviato ai nostri server.",
-            card_2: "Memoria Volatile",
-            desc_2: "Chiudi la tab, i dati spariscono. Nessun database persistente per i tuoi file JSON.",
-            card_3: "Crittografia End-to-End",
-            desc_3: "Anche durante l'auth, le tue credenziali sono protette da protocolli bancari."
-        },
-        useCases: {
-            dev_title: "Sviluppatori_",
-            dev_msg: "Debugga API giganti.",
-            dev_desc: "Visualizza la gerarchia delle risposte REST in tempo reale senza perdere il focus.",
-            arch_title: "Architects_",
-            arch_msg: "Mappa infrastrutture.",
-            arch_desc: "Trasforma stati Terraform o config Kubernetes in schemi navigabili pronti all'uso.",
-            ana_title: "Analysts_",
-            ana_msg: "Trova correlazioni.",
-            ana_desc: "Analizza dataset annidati e complessi. Usa la Neural Search per navigare nel mare dei dati."
+        proFeatures: {
+            title: "MODULI",
+            subtitle: "PRO",
+            radar_title: "Live API Radar",
+            radar_desc: "Connetti J-RAY a un endpoint REST. Imposta l'intervallo (es. 2 sec) e guarda il grafo aggiornarsi in tempo reale mentre i dati live fluiscono.",
+            diff_title: "Visual JSON Diff",
+            diff_desc: "Carica due file JSON diversi e accendi il Diff. J-RAY evidenzierà in tempo reale i nodi Aggiunti (Verde), Rimossi (Rosso) e Modificati (Giallo).",
+            ai_title: "AI Data Profiler",
+            ai_desc: "Fai analizzare l'intero dataset al Profiler. Troverà campi vuoti sospetti, tipi di dato incoerenti (es. una stringa in mezzo a numeri) e bug strutturali.",
+            export_title: "Vector Export",
+            export_desc: "Esporta l'intero grafo navigabile in formato SVG vettoriale ad altissima risoluzione per incollarlo in Figma o nella tua documentazione."
         },
         demo: {
             title_1: "Generazione",
             title_2: "Istantanea.",
-            desc: "Incolla il codice. J-RAY calcola il layout ottimale evitando sovrapposizioni.",
+            desc: "Incolla il codice. L'engine calcola il layout ottimale evitando sovrapposizioni e tracciando i collegamenti.",
             step_1: "PARSING_INPUT_JSON...",
             step_2: "MAPPING_GRAPH_NODES..."
         },
-        feedback: {
-            title: "FEEDBACK",
-            subtitle: "CHANNEL",
-            desc: "Hai trovato un bug o hai un'idea? Invia un segnale diretto agli sviluppatori.",
-            placeholder: "Inserisci il tuo messaggio...",
-            btn: "INVIA_SEGNALE",
-            success: "TRASMISSIONE RICEVUTA."
+        webdemo: {
+            title_1: "Prova la",
+            title_2: "Web Demo.",
+            desc: "Non sei ancora pronto per l'app desktop in Rust? Prova il nostro motore WebAssembly direttamente dal browser. (Funzionalità limitate)",
+            btn: "APRI WEB DEMO"
         },
-        cta: {
-            title_1: "PRONTO AL",
-            title_2: "DECOLLO?",
-            btn_auth: "TORNA_IN_CONSOLE_",
-            btn_guest: "LANCIA_ORA_"
+        architecture: {
+            title: "ARCHITETTURA",
+            subtitle: "DESKTOP FIRST",
+            card_1: "Motore Nativo Rust",
+            desc_1: "J-RAY PRO non è un'app Electron lenta. È scritta interamente in Rust usando eframe/egui per girare a 60FPS interagendo direttamente con la tua GPU.",
+            card_2: "Sicurezza Offline",
+            desc_2: "Nessun dato viene mai inviato ai nostri server. Il parsing, il diffing e la decriptazione avvengono al 100% sulla tua macchina locale.",
+            card_3: "Licenza Perpetua",
+            desc_3: "Paga una volta sola su Lemon Squeezy, usalo per sempre. La chiave di licenza viene salvata localmente nel tuo vault criptato."
         },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     },
@@ -129,68 +124,63 @@ const translations = {
         nav: {
             console: "CONSOLE",
             logout: "LOGOUT_",
-            launch: "LAUNCH_CONSOLE_"
+            launch: "WEB DEMO",
+            pricing: "PRICING",
+            docs: "DOCS"
         },
         hero: {
             init: "[ Initiating_Protocol_J-RAY ]",
             title: "TAME THE CHAOS",
             subtitle: "OF YOUR DATA.",
-            desc: "The JSON visualizer for those who refuse disorder.\nNeural maps, instant layouts, total control.",
-            cta: "LOGS_FILES ↓"
+            desc: "The JSON visualizer for those who refuse disorder.\nNeural maps, token decryption, Live API Radar, and much more.",
+            cta: "EXPLORE FEATURES ↓"
         },
         features: {
             title: "PURE POWER",
             subtitle: "UNDER THE HOOD.",
             f1_title: "Real-Time Parsing",
-            f1_desc: "Edit JSON and watch the graph mutate instantly. Zero latency.",
-            f2_title: "4K Export",
-            f2_desc: "Export high-resolution diagrams ready for your presentations or documentation.",
-            f3_title: "Neural Layout",
-            f3_desc: "Smart positioning algorithms that untangle even the most complex nodes.",
-            f4_title: "Privacy First",
-            f4_desc: "Everything runs in your browser. Your data never leaves your machine."
+            f1_desc: "Edit JSON and watch the graph mutate instantly. The Rust Nitro engine guarantees zero latency even on huge files.",
+            f2_title: "Smart Stack",
+            f2_desc: "Arrays with thousands of elements? J-RAY automatically compresses them into 50-item decks to save your RAM.",
+            f3_title: "X-Ray Decrypter",
+            f3_desc: "Found a JWT Token or Base64 string in the JSON? Click the padlock to decrypt it on the fly without external tools.",
+            f4_title: "Type Code Gen",
+            f4_desc: "Automatically generate TypeScript interfaces, Rust structs, or Python Pydantic models directly from your JSON."
         },
-        architecture: {
-            title: "ARCHITECTURE",
-            subtitle: "ZERO TRUST",
-            card_1: "Client-Side Processing",
-            desc_1: "The rendering engine runs via WebAssembly directly on your CPU. No data is sent to our servers.",
-            card_2: "Volatile Memory",
-            desc_2: "Close the tab, data vanishes. No persistent database for your JSON files.",
-            card_3: "End-to-End Encryption",
-            desc_3: "Even during auth, your credentials are protected by banking-grade protocols."
-        },
-        useCases: {
-            dev_title: "Developers_",
-            dev_msg: "Debug giant APIs.",
-            dev_desc: "Visualize REST response hierarchies in real-time without losing focus.",
-            arch_title: "Architects_",
-            arch_msg: "Map infrastructure.",
-            arch_desc: "Turn Terraform states or Kubernetes configs into navigable, ready-to-use schemas.",
-            ana_title: "Analysts_",
-            ana_msg: "Find correlations.",
-            ana_desc: "Analyze nested and complex datasets. Use Neural Search to navigate the sea of data."
+        proFeatures: {
+            title: "PRO",
+            subtitle: "MODULES",
+            radar_title: "Live API Radar",
+            radar_desc: "Connect J-RAY to a REST endpoint. Set the interval (e.g., 2 sec) and watch the graph update in real-time as live data flows in.",
+            diff_title: "Visual JSON Diff",
+            diff_desc: "Load two different JSON files and enable Diff mode. J-RAY will highlight Added (Green), Removed (Red), and Modified (Yellow) nodes.",
+            ai_title: "AI Data Profiler",
+            ai_desc: "Let the Profiler analyze your dataset. It will find suspicious empty fields, inconsistent data types, and structural anomalies.",
+            export_title: "Vector Export",
+            export_desc: "Export the entire navigable graph to ultra-high resolution SVG format, ready to be pasted into Figma or your technical docs."
         },
         demo: {
             title_1: "Instant",
             title_2: "Generation.",
-            desc: "Paste the code. J-RAY calculates the optimal layout avoiding overlaps.",
+            desc: "Paste the code. The engine calculates the optimal layout avoiding overlaps and routing connections.",
             step_1: "PARSING_INPUT_JSON...",
             step_2: "MAPPING_GRAPH_NODES..."
         },
-        feedback: {
-            title: "FEEDBACK",
-            subtitle: "CHANNEL",
-            desc: "Found a glitch or have an idea? Send a direct signal to the developers.",
-            placeholder: "Enter your transmission...",
-            btn: "SEND_SIGNAL",
-            success: "TRANSMISSION RECEIVED."
+        webdemo: {
+            title_1: "Try the",
+            title_2: "Web Demo.",
+            desc: "Not ready for the desktop Rust app yet? Try our WebAssembly engine directly in your browser. (Features are limited)",
+            btn: "LAUNCH WEB DEMO"
         },
-        cta: {
-            title_1: "READY FOR",
-            title_2: "TAKEOFF?",
-            btn_auth: "BACK_TO_CONSOLE_",
-            btn_guest: "LAUNCH_NOW_"
+        architecture: {
+            title: "ARCHITECTURE",
+            subtitle: "DESKTOP FIRST",
+            card_1: "Native Rust Engine",
+            desc_1: "J-RAY PRO is not a slow Electron app. It's written entirely in Rust using eframe/egui to run at 60FPS directly on your GPU.",
+            card_2: "Offline Security",
+            desc_2: "No data is ever sent to our servers. Parsing, diffing, and decryption happen 100% locally on your machine.",
+            card_3: "Perpetual License",
+            desc_3: "Pay once via Lemon Squeezy, use it forever. Your license key is securely stored in your local encrypted vault."
         },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     }
@@ -201,10 +191,6 @@ export default function LandingPage() {
     const [isHeroReady, setIsHeroReady] = useState(false);
     const [demoStep, setDemoStep] = useState(0);
     const [session, setSession] = useState<any>(null);
-    const [feedbackStatus, setFeedbackStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
-    const [feedbackText, setFeedbackText] = useState('');
-
-    const [honeyPot, setHoneyPot] = useState('');
 
     const { lang, setLang } = useLanguage();
     const navigate = useNavigate();
@@ -234,6 +220,7 @@ export default function LandingPage() {
         return () => window.removeEventListener('mousemove', handleMouse);
     }, []);
 
+    // Timer per l'animazione SVG
     useEffect(() => {
         let timeout: NodeJS.Timeout;
         if (demoStep === 4) {
@@ -246,52 +233,10 @@ export default function LandingPage() {
 
     const handleComplete = useCallback(() => setIsHeroReady(true), []);
 
-    const handleFeedbackSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (honeyPot) return;
-
-        const lastSent = localStorage.getItem('jray_last_feedback');
-        if (lastSent) {
-            const timeDiff = Date.now() - parseInt(lastSent);
-            if (timeDiff < 60000) {
-                alert("SYSTEM COOLDOWN: Attendi 60 secondi tra un segnale e l'altro.");
-                return;
-            }
-        }
-
-        if (!feedbackText.trim()) return;
-
-        setFeedbackStatus('sending');
-
-        try {
-            const { error } = await supabase.from('feedback').insert({
-                message: feedbackText,
-                user_email: session?.user?.email || 'anonymous',
-                metadata: {
-                    lang: lang,
-                    userAgent: navigator.userAgent,
-                    screen: `${window.screen.width}x${window.screen.height}`
-                }
-            });
-
-            if (error) throw error;
-
-            localStorage.setItem('jray_last_feedback', Date.now().toString());
-            setFeedbackStatus('sent');
-            setFeedbackText('');
-            setTimeout(() => setFeedbackStatus('idle'), 3000);
-        } catch (error) {
-            console.error('Error sending signal:', error);
-            setFeedbackStatus('idle');
-            alert("ERRORE DI TRASMISSIONE. Riprova.");
-        }
-    };
-
     return (
         <div className="min-h-screen cyber-bg text-white overflow-x-hidden selection:bg-indigo-500/30 font-sans">
-            <motion.div className="progress-bar" style={{ scaleX }} />
-            <div className="spotlight" />
+            <motion.div className="progress-bar z-[1000]" style={{ scaleX }} />
+            <div className="spotlight fixed inset-0 pointer-events-none" />
 
             {/* --- NAVBAR --- */}
             <AnimatePresence>
@@ -307,49 +252,26 @@ export default function LandingPage() {
                         </div>
                         <div className="flex items-center gap-4 md:gap-8">
 
-                            {/* 🍕 TASTO DONAZIONE UGUALE AL VISUALIZER 🍕 */}
-                            <a
-                                href="https://www.buymeacoffee.com/gentilemau6"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FF5F5F]/10 border border-[#FF5F5F]/30 hover:bg-[#FF5F5F] text-[#FF5F5F] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,95,95,0)] hover:shadow-[0_0_20px_rgba(255,95,95,0.4)] hover:-translate-y-0.5"
-                            >
-                                <span className="text-sm group-hover:animate-bounce">🍕</span>
-                                <span className="text-[10px] font-black uppercase tracking-tighter">
-                                    {lang === 'it' ? 'Offrimi una pizza' : 'Support J-Ray'}
-                                </span>
-                            </a>
+                            {/* Tasti di navigazione Custom */}
+                            <div className="hidden md:flex items-center gap-6 text-[10px] font-bold tracking-widest text-zinc-400 uppercase">
+                                <Link to="/pricing" className="hover:text-white transition-colors">{t.nav.pricing}</Link>
+                                <Link to="/docs" className="hover:text-white transition-colors">{t.nav.docs}</Link>
+                            </div>
 
                             <div className="flex items-center bg-white/5 rounded-full p-1 border border-white/10">
-                                <button
-                                    onClick={() => setLang('it')}
-                                    className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'it' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}
-                                >
-                                    IT
-                                </button>
-                                <button
-                                    onClick={() => setLang('en')}
-                                    className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'en' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}
-                                >
-                                    EN
-                                </button>
+                                <button onClick={() => setLang('it')} className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'it' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}>IT</button>
+                                <button onClick={() => setLang('en')} className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'en' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}>EN</button>
                             </div>
 
                             {session ? (
                                 <>
                                     <Link to="/app" className="text-[10px] font-bold tracking-widest text-zinc-400 hover:text-white transition-colors uppercase">{t.nav.console}</Link>
-                                    <button
-                                        onClick={handleLogout}
-                                        className="px-5 py-2 bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-black rounded-full hover:bg-red-500 hover:text-white transition-all"
-                                    >
+                                    <button onClick={handleLogout} className="px-5 py-2 bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-black rounded-full hover:bg-red-500 hover:text-white transition-all">
                                         {t.nav.logout}
                                     </button>
                                 </>
                             ) : (
-                                <Link
-                                    to="/app"
-                                    className="px-6 py-2 md:px-8 md:py-3 bg-white text-black text-[10px] md:text-xs font-black rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-                                >
+                                <Link to="/app" className="px-6 py-2 md:px-8 md:py-3 bg-white text-black text-[10px] md:text-xs font-black rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                                     {t.nav.launch}
                                 </Link>
                             )}
@@ -370,23 +292,18 @@ export default function LandingPage() {
 
                 <AnimatePresence>
                     {isHeroReady && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="space-y-8"
-                        >
+                        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="space-y-8">
                             <h2 className="text-4xl md:text-7xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-cyan-400 text-glow">
                                 {t.hero.subtitle}
                             </h2>
                             <p className="max-w-2xl mx-auto text-zinc-500 text-lg font-medium leading-relaxed whitespace-pre-line">
                                 {t.hero.desc}
                             </p>
-                            <div className="flex gap-4 justify-center pt-6">
-                                <button
-                                    onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="px-10 py-5 border border-white/10 rounded-2xl font-black hover:bg-white/5 transition-all text-zinc-500 italic shadow-xl"
-                                >
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 items-center">
+                                <Link to="/pricing" className="px-10 py-5 bg-indigo-600 rounded-2xl font-black hover:bg-indigo-500 transition-all text-white italic shadow-[0_0_30px_rgba(79,70,229,0.3)]">
+                                    DOWNLOAD DESKTOP APP
+                                </Link>
+                                <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="px-10 py-5 border border-white/10 rounded-2xl font-black hover:bg-white/5 transition-all text-zinc-500 italic">
                                     {t.hero.cta}
                                 </button>
                             </div>
@@ -395,112 +312,79 @@ export default function LandingPage() {
                 </AnimatePresence>
             </section>
 
-            {/* --- FEATURES SECTION --- */}
-            <section id="features" className="py-20 px-6 relative z-20 max-w-7xl mx-auto">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={sectionVariants}
-                    className="space-y-16"
-                >
+            {/* --- CORE FEATURES SECTION --- */}
+            <section id="features" className="py-32 px-6 relative z-20 max-w-7xl mx-auto">
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants} className="space-y-16">
                     <div className="text-center space-y-4">
                         <h2 className="text-5xl font-black italic uppercase tracking-tighter">
                             {t.features.title} <span className="text-indigo-500">{t.features.subtitle}</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { title: t.features.f1_title, desc: t.features.f1_desc, icon: "⚡" },
-                            { title: t.features.f2_title, desc: t.features.f2_desc, icon: "📸" },
-                            { title: t.features.f3_title, desc: t.features.f3_desc, icon: "🧠" },
-                            { title: t.features.f4_title, desc: t.features.f4_desc, icon: "🛡️" },
+                            { title: t.features.f1_title, desc: t.features.f1_desc, icon: "⚡", color: "text-yellow-400" },
+                            { title: t.features.f2_title, desc: t.features.f2_desc, icon: "🃏", color: "text-emerald-400" },
+                            { title: t.features.f3_title, desc: t.features.f3_desc, icon: "🔓", color: "text-red-400" },
+                            { title: t.features.f4_title, desc: t.features.f4_desc, icon: "🧬", color: "text-cyan-400" },
                         ].map((f, i) => (
-                            <div key={i} className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 hover:border-indigo-500/30 transition-all cursor-crosshair">
-                                <div className="text-4xl mb-6">{f.icon}</div>
-                                <h3 className="text-xl font-bold italic mb-2 text-zinc-200">{f.title}</h3>
-                                <p className="text-xs text-zinc-500 leading-relaxed font-mono">{f.desc}</p>
+                            <div key={i} className="p-10 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 hover:border-indigo-500/30 transition-all">
+                                <div className={`text-4xl mb-6 ${f.color}`}>{f.icon}</div>
+                                <h3 className="text-2xl font-black italic mb-4 text-white uppercase">{f.title}</h3>
+                                <p className="text-sm text-zinc-400 leading-relaxed font-mono">{f.desc}</p>
                             </div>
                         ))}
                     </div>
                 </motion.div>
             </section>
 
-            {/* --- ARCHITECTURE SECTION --- */}
-            <section className="py-20 px-6 relative z-20 max-w-7xl mx-auto border-t border-white/5">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={sectionVariants}
-                    className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-                >
-                    <div>
-                        <h2 className="text-4xl font-black italic uppercase tracking-tighter mb-6">
-                            {t.architecture.title} <span className="text-indigo-500 block">{t.architecture.subtitle}</span>
+            {/* --- PRO MODULES SECTION --- */}
+            <section className="py-32 px-6 relative z-20 max-w-7xl mx-auto border-t border-white/5">
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={sectionVariants} className="space-y-16">
+                    <div className="text-center space-y-4">
+                        <h2 className="text-5xl font-black italic uppercase tracking-tighter">
+                            {t.proFeatures.title} <span className="text-pink-500">{t.proFeatures.subtitle}</span>
                         </h2>
-                        <div className="space-y-6">
-                            {[
-                                { title: t.architecture.card_1, desc: t.architecture.desc_1 },
-                                { title: t.architecture.card_2, desc: t.architecture.desc_2 },
-                                { title: t.architecture.card_3, desc: t.architecture.desc_3 },
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex gap-4 items-start">
-                                    <div className="w-1 h-12 bg-indigo-500 rounded-full flex-shrink-0" />
-                                    <div>
-                                        <h4 className="text-lg font-bold text-white uppercase tracking-wide">{item.title}</h4>
-                                        <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
-                    {/* Visualizzazione Astratta Architettura */}
-                    <div className="relative aspect-square md:aspect-video bg-zinc-900/50 rounded-3xl border border-white/10 overflow-hidden flex items-center justify-center">
-                        <div className="absolute inset-0 bg-grid opacity-20" />
-                        <div className="w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl absolute animate-pulse" />
-                        <div className="text-center z-10 font-mono text-xs text-indigo-400">
-                            <div className="mb-2">[ BROWSER_SANDBOX ]</div>
-                            <div className="p-4 border border-indigo-500 rounded bg-black/50 backdrop-blur">
-                                J-RAY_ENGINE.WASM
-                            </div>
-                            <div className="h-8 w-[1px] bg-indigo-500 mx-auto my-1" />
-                            <div className="text-white font-bold">YOUR_DATA.JSON</div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        {/* Radar */}
+                        <div className="p-12 bg-black/40 rounded-[40px] border border-white/5 backdrop-blur-md relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-3xl group-hover:bg-green-500/20 transition-colors" />
+                            <div className="text-green-500 mb-6 font-mono text-xs uppercase tracking-widest border border-green-500/30 inline-block px-3 py-1 rounded-full">Module_01</div>
+                            <h3 className="text-3xl font-black italic mb-4 text-white">{t.proFeatures.radar_title}</h3>
+                            <p className="text-zinc-400 leading-relaxed">{t.proFeatures.radar_desc}</p>
+                        </div>
+
+                        {/* Diff */}
+                        <div className="p-12 bg-black/40 rounded-[40px] border border-white/5 backdrop-blur-md relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-colors" />
+                            <div className="text-yellow-500 mb-6 font-mono text-xs uppercase tracking-widest border border-yellow-500/30 inline-block px-3 py-1 rounded-full">Module_02</div>
+                            <h3 className="text-3xl font-black italic mb-4 text-white">{t.proFeatures.diff_title}</h3>
+                            <p className="text-zinc-400 leading-relaxed">{t.proFeatures.diff_desc}</p>
+                        </div>
+
+                        {/* AI Profiler */}
+                        <div className="p-12 bg-black/40 rounded-[40px] border border-white/5 backdrop-blur-md relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-colors" />
+                            <div className="text-cyan-500 mb-6 font-mono text-xs uppercase tracking-widest border border-cyan-500/30 inline-block px-3 py-1 rounded-full">Module_03</div>
+                            <h3 className="text-3xl font-black italic mb-4 text-white">{t.proFeatures.ai_title}</h3>
+                            <p className="text-zinc-400 leading-relaxed">{t.proFeatures.ai_desc}</p>
+                        </div>
+
+                        {/* Export */}
+                        <div className="p-12 bg-black/40 rounded-[40px] border border-white/5 backdrop-blur-md relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors" />
+                            <div className="text-purple-500 mb-6 font-mono text-xs uppercase tracking-widest border border-purple-500/30 inline-block px-3 py-1 rounded-full">Module_04</div>
+                            <h3 className="text-3xl font-black italic mb-4 text-white">{t.proFeatures.export_title}</h3>
+                            <p className="text-zinc-400 leading-relaxed">{t.proFeatures.export_desc}</p>
                         </div>
                     </div>
                 </motion.div>
             </section>
 
-            {/* --- USE CASES SECTION --- */}
-            <section className="py-32 px-6 relative z-20 max-w-7xl mx-auto">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={sectionVariants}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-10"
-                >
-                    <div className="p-10 bg-zinc-900/40 rounded-[40px] border border-white/5 backdrop-blur-md hover:border-indigo-500/30 transition-colors group">
-                        <h3 className="text-indigo-400 font-mono text-xs mb-4 uppercase tracking-[0.2em]">{t.useCases.dev_title}</h3>
-                        <p className="text-xl font-bold italic mb-4 group-hover:text-white transition-colors">{t.useCases.dev_msg}</p>
-                        <p className="text-zinc-500 text-sm">{t.useCases.dev_desc}</p>
-                    </div>
-                    <div className="p-10 bg-zinc-900/40 rounded-[40px] border border-white/5 backdrop-blur-md hover:border-cyan-500/30 transition-colors group">
-                        <h3 className="text-cyan-400 font-mono text-xs mb-4 uppercase tracking-[0.2em]">{t.useCases.arch_title}</h3>
-                        <p className="text-xl font-bold italic mb-4 group-hover:text-white transition-colors">{t.useCases.arch_msg}</p>
-                        <p className="text-zinc-500 text-sm">{t.useCases.arch_desc}</p>
-                    </div>
-                    <div className="p-10 bg-zinc-900/40 rounded-[40px] border border-white/5 backdrop-blur-md hover:border-purple-500/30 transition-colors group">
-                        <h3 className="text-purple-400 font-mono text-xs mb-4 uppercase tracking-[0.2em]">{t.useCases.ana_title}</h3>
-                        <p className="text-xl font-bold italic mb-4 group-hover:text-white transition-colors">{t.useCases.ana_msg}</p>
-                        <p className="text-zinc-500 text-sm">{t.useCases.ana_desc}</p>
-                    </div>
-                </motion.div>
-            </section>
-
-            {/* --- INTERACTIVE DEMO --- */}
-            <section id="demo" className="py-40 px-6 relative z-20 max-w-7xl mx-auto">
+            {/* --- INTERACTIVE DEMO (ANIMAZIONE RIPRISTINATA) --- */}
+            <section id="demo" className="py-32 px-6 relative z-20 max-w-7xl mx-auto border-t border-white/5">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -539,7 +423,7 @@ export default function LandingPage() {
                         </div>
                     </div>
 
-                    {/* SIMULATORE GRAFICO */}
+                    {/* SIMULATORE GRAFICO ANIMATO */}
                     <div className="relative aspect-video bg-[#020617] rounded-[50px] border border-white/5 overflow-hidden shadow-2xl flex items-center justify-center">
                         <div className="absolute inset-0 bg-grid opacity-10" />
 
@@ -652,104 +536,66 @@ export default function LandingPage() {
                 </motion.div>
             </section>
 
-            {/* --- FEEDBACK SECTION (BLINDATA) --- */}
-            <section className="py-20 px-6 relative z-20 max-w-4xl mx-auto">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={sectionVariants}
-                    className="bg-black/40 border border-white/5 rounded-[40px] p-10 md:p-16 backdrop-blur-md relative overflow-hidden"
-                >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50" />
-
-                    <div className="text-center mb-10">
-                        <h3 className="text-3xl font-black italic uppercase mb-2">{t.feedback.title} <span className="text-indigo-500">{t.feedback.subtitle}</span></h3>
-                        <p className="text-zinc-500 text-sm font-mono max-w-lg mx-auto">{t.feedback.desc}</p>
-                    </div>
-
-                    <form onSubmit={handleFeedbackSubmit} className="space-y-6 max-w-md mx-auto relative">
-
-                        {/* --- HONEYPOT TRAP --- */}
-                        <input
-                            type="text"
-                            value={honeyPot}
-                            onChange={(e) => setHoneyPot(e.target.value)}
-                            tabIndex={-1}
-                            autoComplete="off"
-                            className="absolute opacity-0 -z-10 w-0 h-0 pointer-events-none"
-                            placeholder="Do not fill this if you are human"
-                        />
-
-                        {/* --- TEXTAREA REALE --- */}
-                        <div className="relative group">
-                            <textarea
-                                value={feedbackText}
-                                onChange={(e) => setFeedbackText(e.target.value)}
-                                placeholder={t.feedback.placeholder}
-                                className="w-full bg-zinc-900/50 border border-white/10 rounded-xl p-4 text-sm font-mono text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500 transition-colors h-32 resize-none"
-                            />
-                            <div className="absolute bottom-3 right-3 text-[10px] text-zinc-700 font-mono group-focus-within:text-indigo-500">
-                                {feedbackText.length} chars
-                            </div>
-                        </div>
-
-                        <button
-                            type="submit"
-                            disabled={feedbackStatus !== 'idle'}
-                            className={`w-full py-4 rounded-xl font-black italic tracking-widest uppercase transition-all flex items-center justify-center gap-2
-                                ${feedbackStatus === 'sent' ? 'bg-green-500 text-black' : 'bg-white text-black hover:bg-indigo-500 hover:text-white'}
-                            `}
-                        >
-                            {feedbackStatus === 'sending' && (
-                                <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-                            )}
-                            {feedbackStatus === 'idle' && t.feedback.btn}
-                            {feedbackStatus === 'sending' && "TRANSMITTING..."}
-                            {feedbackStatus === 'sent' && t.feedback.success}
-                        </button>
-                    </form>
-                </motion.div>
-            </section>
-
-            {/* --- CTA SECTION --- */}
-            <section className="py-60 text-center relative z-20 px-6">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={sectionVariants}
-                    className="space-y-12"
-                >
-                    <h2 className="text-6xl md:text-8xl font-black italic uppercase tracking-tighter leading-none">
-                        {t.cta.title_1} <br /> <span className="text-indigo-500">{t.cta.title_2}</span>
-                    </h2>
-                    <Link
-                        to="/app" /* <-- MODIFICATO: ORA TUTTI VANNO ALLA CONSOLE */
-                        className="px-16 py-8 bg-indigo-600 rounded-[35px] text-2xl font-black italic shadow-[0_20px_80px_rgba(79,70,229,0.3)] hover:scale-110 transition-all inline-block"
-                    >
-                        {session ? t.cta.btn_auth : t.cta.btn_guest}
+            {/* --- WEB DEMO CTA SECTION --- */}
+            <section className="pb-32 pt-10 px-6 relative z-20 max-w-5xl mx-auto">
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants} className="bg-indigo-900/20 border border-indigo-500/30 rounded-[40px] p-12 text-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+                    <h2 className="text-4xl md:text-5xl font-black uppercase italic mb-6 relative z-10">{t.webdemo.title_1} <span className="text-indigo-400">{t.webdemo.title_2}</span></h2>
+                    <p className="text-zinc-400 mb-10 max-w-xl mx-auto relative z-10">{t.webdemo.desc}</p>
+                    <Link to="/app" className="relative z-10 px-10 py-5 bg-white text-black rounded-xl font-black italic shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform inline-block">
+                        {t.webdemo.btn}
                     </Link>
                 </motion.div>
             </section>
 
-            {/* --- FOOTER PULITO --- */}
-            <footer className="py-10 border-t border-white/5 relative z-20 bg-black/20 backdrop-blur-sm">
-                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* --- ARCHITECTURE SECTION --- */}
+            <section className="py-32 px-6 relative z-20 max-w-7xl mx-auto border-t border-white/5">
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 className="text-4xl font-black italic uppercase tracking-tighter mb-10">
+                            {t.architecture.title} <span className="text-indigo-500 block">{t.architecture.subtitle}</span>
+                        </h2>
+                        <div className="space-y-8">
+                            {[
+                                { title: t.architecture.card_1, desc: t.architecture.desc_1, color: "bg-orange-500" },
+                                { title: t.architecture.card_2, desc: t.architecture.desc_2, color: "bg-emerald-500" },
+                                { title: t.architecture.card_3, desc: t.architecture.desc_3, color: "bg-indigo-500" },
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex gap-6 items-start">
+                                    <div className={`w-1 h-16 ${item.color} rounded-full flex-shrink-0`} />
+                                    <div>
+                                        <h4 className="text-xl font-black text-white uppercase tracking-wide italic mb-2">{item.title}</h4>
+                                        <p className="text-sm text-zinc-400 leading-relaxed font-mono">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {/* Visualizzazione Astratta Architettura */}
+                    <div className="relative aspect-square md:aspect-video bg-zinc-900/50 rounded-3xl border border-white/10 overflow-hidden flex items-center justify-center">
+                        <div className="absolute inset-0 bg-grid opacity-20" />
+                        <div className="text-center z-10 font-mono text-xs text-orange-400">
+                            <div className="mb-2">[ OPERATING_SYSTEM_LEVEL ]</div>
+                            <div className="p-6 border border-orange-500/50 rounded-xl bg-black/80 backdrop-blur shadow-[0_0_30px_rgba(249,115,22,0.15)] text-lg">
+                                J-RAY_PRO.exe <br /> <span className="text-[10px] text-zinc-500">Built with Rust 🦀</span>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+            </section>
 
-                    {/* Copyright */}
+            {/* --- FOOTER --- */}
+            <footer className="pt-20 pb-10 border-t border-white/5 relative z-20 bg-black/20 backdrop-blur-sm">
+                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
                     <div className="text-[10px] font-mono text-zinc-600 tracking-[0.2em] uppercase">
                         {t.footer}
                     </div>
-
-                    {/* Link Legali - SOLO PRIVACY POLICY */}
-                    <div className="flex items-center gap-6 text-[10px] font-mono tracking-widest uppercase">
-                        <a
-                            href="https://www.iubenda.com/privacy-policy/13130280"
-                            className="iubenda-white iubenda-noiframe iubenda-embed text-zinc-600 hover:text-white transition-colors decoration-0"
-                            title="Privacy Policy"
-                        >
-                            Privacy_Policy
+                    <div className="flex flex-wrap justify-center gap-6 text-[10px] font-mono tracking-widest uppercase">
+                        <Link to="/docs" className="text-zinc-500 hover:text-white transition-colors">Documentation</Link>
+                        <Link to="/pricing" className="text-zinc-500 hover:text-white transition-colors">Pricing</Link>
+                        <Link to="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms of Service</Link>
+                        <a href="https://www.iubenda.com/privacy-policy/13130280" className="iubenda-white iubenda-noiframe iubenda-embed text-zinc-500 hover:text-white transition-colors decoration-0" title="Privacy Policy">
+                            Privacy Policy
                         </a>
                     </div>
                 </div>
