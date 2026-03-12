@@ -176,7 +176,7 @@ export default function PricingPage() {
                             ))}
                         </ul>
                         {/* 📝 INCOLLA QUI IL LINK LEMON SQUEEZY PER LA VERSIONE PERSONAL */}
-                        <a href="https://tuo-negozio.lemonsqueezy.com/checkout/buy/..." className="w-full py-4 text-center rounded-2xl bg-white/10 hover:bg-white/20 text-white font-black italic tracking-widest uppercase transition-all border border-white/5">
+                        <a href="https://j-ray-pro.lemonsqueezy.com/checkout/buy/9a97c742-bfa5-434f-8a27-5d859ad37e6c" className="w-full py-4 text-center rounded-2xl bg-white/10 hover:bg-white/20 text-white font-black italic tracking-widest uppercase transition-all border border-white/5">
                             {t.pricing.personal.btn}
                         </a>
                     </motion.div>
@@ -214,7 +214,7 @@ export default function PricingPage() {
                             ))}
                         </ul>
                         {/* 📝 INCOLLA QUI IL LINK LEMON SQUEEZY PER LA VERSIONE PRO */}
-                        <a href="https://tuo-negozio.lemonsqueezy.com/checkout/buy/..." className="w-full py-4 text-center rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-black italic tracking-widest uppercase transition-all shadow-[0_10px_30px_rgba(79,70,229,0.4)] hover:scale-105 relative z-10">
+                        <a href="https://j-ray-pro.lemonsqueezy.com/checkout/buy/ad0873a1-d70a-4a26-8e86-3151332b724f" className="w-full py-4 text-center rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-black italic tracking-widest uppercase transition-all shadow-[0_10px_30px_rgba(79,70,229,0.4)] hover:scale-105 relative z-10">
                             {t.pricing.pro.btn}
                         </a>
                     </motion.div>
