@@ -88,7 +88,7 @@ export default function DownloadPage() {
     };
 
     return (
-        <div className="min-h-screen cyber-bg text-white overflow-x-hidden selection:bg-indigo-500/30 font-sans pb-20 relative">
+        <div className="w-full flex-1 pb-20 relative">
             <div className="spotlight fixed inset-0 pointer-events-none" />
 
             <div className="max-w-5xl mx-auto px-6 pt-32 relative z-10">

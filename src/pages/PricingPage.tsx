@@ -1,7 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
 import { useLanguage } from '../context/LanguageContext';
 
 // --- TRADUZIONI ---
@@ -123,62 +121,19 @@ const translations = {
 };
 
 export default function PricingPage() {
-    const [session, setSession] = useState<any>(null);
-    const { lang, setLang } = useLanguage();
-    const navigate = useNavigate();
+    const { lang } = useLanguage();
     const t = translations[lang];
 
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
-    useEffect(() => {
-        supabase.auth.getSession().then(({ data: { session } }) => {
-            setSession(session);
-        });
-    }, []);
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        setSession(null);
-        navigate('/');
-    };
 
     return (
-        <div className="min-h-screen cyber-bg text-white overflow-x-hidden selection:bg-indigo-500/30 font-sans pb-20">
+        <div className="w-full relative flex-1 pb-20">
             <motion.div className="progress-bar fixed top-0 left-0 right-0 h-1 bg-indigo-500 origin-left z-[200]" style={{ scaleX }} />
             <div className="spotlight fixed inset-0 pointer-events-none" />
 
-            {/* --- NAVBAR --- */}
-            <nav className="fixed top-0 left-0 right-0 z-[100] px-6 py-4 md:px-12 md:py-6 flex items-center justify-between backdrop-blur-md border-b border-white/5 bg-black/20">
-                <Link to="/" className="text-xl md:text-2xl font-black italic tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400 hover:scale-105 transition-transform">
-                    J-RAY
-                </Link>
-                <div className="flex items-center gap-4 md:gap-8">
 
-                    <div className="hidden md:flex items-center gap-6 text-[10px] font-bold tracking-widest text-zinc-400 uppercase">
-                        <Link to="/docs" className="hover:text-white transition-colors">{t.nav.docs}</Link>
-                        <Link to="/terms" className="hover:text-white transition-colors">{t.nav.terms}</Link>
-                    </div>
-
-                    <div className="flex items-center bg-white/5 rounded-full p-1 border border-white/10">
-                        <button onClick={() => setLang('it')} className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'it' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}>IT</button>
-                        <button onClick={() => setLang('en')} className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === 'en' ? 'bg-indigo-500 text-white shadow-lg' : 'text-zinc-500 hover:text-white'}`}>EN</button>
-                    </div>
-
-                    {session ? (
-                        <>
-                            <Link to="/app" className="text-[10px] font-bold tracking-widest text-zinc-400 hover:text-white transition-colors uppercase">{t.nav.console}</Link>
-                            <button onClick={handleLogout} className="px-5 py-2 bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-black rounded-full hover:bg-red-500 hover:text-white transition-all">
-                                {t.nav.logout}
-                            </button>
-                        </>
-                    ) : (
-                        <Link to="/app" className="px-6 py-2 md:px-8 md:py-3 bg-white text-black text-[10px] md:text-xs font-black rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                            {t.nav.launch}
-                        </Link>
-                    )}
-                </div>
-            </nav>
 
             {/* --- HEADER --- */}
             <header className="pt-40 pb-16 px-6 text-center relative z-20">
@@ -304,18 +259,7 @@ export default function PricingPage() {
 
             </main>
 
-            {/* --- FOOTER --- */}
-            <footer className="mt-32 border-t border-white/5 relative z-20 bg-black/20 backdrop-blur-sm">
-                <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div className="text-[10px] font-mono text-zinc-600 tracking-[0.2em] uppercase">
-                        {t.footer}
-                    </div>
-                    <div className="flex items-center gap-6 text-[10px] font-mono tracking-widest uppercase">
-                        <Link to="/docs" className="text-zinc-500 hover:text-white transition-colors">Docs</Link>
-                        <Link to="/terms" className="text-zinc-500 hover:text-white transition-colors">Terms</Link>
-                        <Link to="/privacy" className="text-zinc-500 hover:text-white transition-colors">Privacy Policy</Link>                    </div>
-                </div>
-            </footer>
+
         </div>
     );
 }

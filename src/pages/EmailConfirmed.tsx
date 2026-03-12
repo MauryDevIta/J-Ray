@@ -28,7 +28,7 @@ export default function EmailConfirmed() {
     }, [navigate]);
 
     return (
-        <div className="h-screen w-screen bg-[#050508] flex items-center justify-center font-mono text-white overflow-hidden relative">
+        <div className="flex-1 w-full bg-[#050508] flex items-center justify-center font-mono text-white overflow-hidden relative">
 
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(18,18,23,0)_1px,transparent_1px),linear-gradient(90deg,rgba(18,18,23,0)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] opacity-20" />

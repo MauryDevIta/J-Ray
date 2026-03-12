@@ -81,7 +81,7 @@ export default function PrivacyPage() {
     const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
     return (
-        <div className="min-h-screen cyber-bg text-white overflow-x-hidden selection:bg-indigo-500/30 font-sans pb-20">
+        <div className="w-full relative flex-1 pb-20">
             <motion.div className="progress-bar fixed top-0 left-0 right-0 h-1 bg-indigo-500 origin-left z-[200]" style={{ scaleX }} />
             <div className="spotlight fixed inset-0 pointer-events-none" />
 

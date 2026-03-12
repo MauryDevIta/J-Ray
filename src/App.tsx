@@ -11,6 +11,8 @@ import PricingPage from './pages/PricingPage';
 import PrivacyPage from './pages/PrivacyPage';
 import DocsPage from './pages/DocsPage';
 import DownloadPage from './pages/DownloadPage';
+import Layout from './components/layout/Layout';
+
 
 export default function App() {
     const [session, setSession] = useState<any>(null);
@@ -42,15 +44,17 @@ export default function App() {
         <LanguageProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route element={<Layout />}>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/auth/confirmed" element={<EmailConfirmed />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/docs" element={<DocsPage />} />
+                        <Route path="/download" element={<DownloadPage />} />
+                    </Route>
                     <Route path="/login" element={!session ? <Login /> : <Navigate to="/app" replace />} />
                     <Route path="/app" element={<Visualizer />} />
-                    <Route path="/auth/confirmed" element={<EmailConfirmed />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/download" element={<DownloadPage />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </BrowserRouter>

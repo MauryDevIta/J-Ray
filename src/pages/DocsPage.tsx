@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
 // --- COMPONENTI UI DOCUMENTAZIONE ---
@@ -626,20 +625,10 @@ export default function DocsPage() {
 
 
     return (
-        <div className="min-h-screen cyber-bg text-white font-sans selection:bg-indigo-500/30 flex flex-col">
+        <div className="w-full relative flex-1 flex flex-col">
             <div className="spotlight fixed inset-0 pointer-events-none z-0" />
 
-            {/* HEADER FISSO */}
-            <header className="fixed top-0 left-0 right-0 z-[100] px-6 py-4 md:px-12 md:py-6 flex items-center justify-between backdrop-blur-xl border-b border-white/5 bg-black/40">
-                <div className="flex items-center gap-6">
-                    <Link to="/" className="text-xs font-mono tracking-widest text-zinc-500 hover:text-white transition-colors uppercase">
-                        {t.nav.back}
-                    </Link>
-                    <div className="text-xl md:text-2xl font-black italic tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-                        {t.title}
-                    </div>
-                </div>
-            </header>
+
 
             {/* LAYOUT A DUE COLONNE */}
             <div className="flex-1 flex w-full max-w-7xl mx-auto pt-24 md:pt-32 relative z-10 px-4 md:px-6">
