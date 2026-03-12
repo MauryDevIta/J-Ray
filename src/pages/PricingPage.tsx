@@ -48,7 +48,7 @@ const translations = {
         },
         trial: {
             title: "Non sei ancora sicuro?",
-            desc: "Scarica J-RAY PRO e provalo gratuitamente per 14 giorni. Tutte le funzionalità PRO sono sbloccate durante il periodo di prova.",
+            desc: "Scarica J-RAY PRO e provalo gratuitamente per 7 giorni. Tutte le funzionalità PRO sono sbloccate durante il periodo di prova.",
             btn: "SCARICA LA TRIAL (WINDOWS .EXE)",
             note: "Nessuna carta di credito richiesta."
         },
@@ -56,7 +56,7 @@ const translations = {
             title: "FAQ",
             q1: "È un abbonamento mensile?",
             a1: "No. Odiamo gli abbonamenti quanto te. Paghi una volta sola (Lifetime) e la licenza è tua per sempre.",
-            q2: "Cosa succede dopo i 14 giorni di Trial?",
+            q2: "Cosa succede dopo i 7 giorni di Trial?",
             a2: "L'applicazione si bloccherà e ti verrà chiesto di inserire una chiave di licenza (Personal o PRO) per continuare a usarla. Nessun addebito automatico.",
             q3: "Posso fare l'upgrade da Personal a PRO in futuro?",
             a3: "Certamente. Basterà acquistare la licenza PRO e inserirla nel software per sbloccare istantaneamente i moduli avanzati."
@@ -105,7 +105,7 @@ const translations = {
         },
         trial: {
             title: "Not entirely sure yet?",
-            desc: "Download J-RAY PRO and try it free for 14 days. All PRO features are fully unlocked during the trial period.",
+            desc: "Download J-RAY PRO and try it free for 7 days. All PRO features are fully unlocked during the trial period.",
             btn: "DOWNLOAD TRIAL (WINDOWS .EXE)",
             note: "No credit card required."
         },
@@ -113,7 +113,7 @@ const translations = {
             title: "FAQ",
             q1: "Is this a monthly subscription?",
             a1: "No. We hate subscriptions as much as you do. You pay once (Lifetime) and the license is yours forever.",
-            q2: "What happens after the 14-day Trial?",
+            q2: "What happens after the 7-day Trial?",
             a2: "The application will lock and prompt you to enter a license key (Personal or PRO) to continue. There are no automatic charges.",
             q3: "Can I upgrade from Personal to PRO later?",
             a3: "Absolutely. Just purchase a PRO license and enter it into the software to instantly unlock the advanced modules."

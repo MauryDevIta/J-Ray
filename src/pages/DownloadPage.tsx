@@ -12,8 +12,8 @@ const translations = {
         subtitle: "J-RAY PRO",
         version_label: "Ultima versione stabile:",
         desc: "L'engine nativo in Rust per dominare i tuoi dati. Scegli il tuo sistema operativo e inizia subito.",
-        trial_title: "14 GIORNI DI TRIAL GRATUITO",
-        trial_desc: "Scarica l'app e avviala. Nessuna carta di credito richiesta, nessuna registrazione. Hai 14 giorni per testare TUTTE le funzionalità PRO (Visual Diff, Radar API, X-Ray) senza limiti.",
+        trial_title: "7 GIORNI DI TRIAL GRATUITO",
+        trial_desc: "Scarica l'app e avviala. Nessuna carta di credito richiesta, nessuna registrazione. Hai 7 giorni per testare TUTTE le funzionalità PRO (Visual Diff, Radar API, X-Ray) senza limiti.",
         os: {
             win: "Download per Windows",
             mac: "Download per macOS",
@@ -30,8 +30,8 @@ const translations = {
         subtitle: "J-RAY PRO",
         version_label: "Latest stable version:",
         desc: "The native Rust engine to tame your data. Choose your operating system and start immediately.",
-        trial_title: "14-DAY FREE TRIAL",
-        trial_desc: "Download and run the app. No credit card required, no sign-up. You get 14 days to test ALL PRO features (Visual Diff, API Radar, X-Ray) without limits.",
+        trial_title: "7-DAY FREE TRIAL",
+        trial_desc: "Download and run the app. No credit card required, no sign-up. You get 7 days to test ALL PRO features (Visual Diff, API Radar, X-Ray) without limits.",
         os: {
             win: "Download for Windows",
             mac: "Download for macOS",

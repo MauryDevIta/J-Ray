@@ -120,7 +120,7 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 2 - REGISTRATION & LICENSE ACCOUNT</h2>
                             <p className="mb-4">Certain of the Services or portions of the Site may require you to register for a License, becoming a "Registered User". As part of the License creation process, you may be asked to provide an email unique to the Account ("Login Information"). You are responsible for the confidentiality and use of your Login Information and agree not to transfer or disclose your Login Information (including your License Key) to any third party other than an individual with express authority to act on your behalf.</p>
-                            <p className="mb-4">Our Services are offered under the following tiers: a free 14-day Trial Version, a Personal License (valid for up to 1 device), and a PRO License (valid for up to 2 devices and unlocking premium features like Radar API and Visual Diff).</p>
+                            <p className="mb-4">Our Services are offered under the following tiers: a free 7-day Trial Version, a Personal License (valid for up to 1 device), and a PRO License (valid for up to 2 devices and unlocking premium features like Radar API and Visual Diff).</p>
                             <p>If you suspect any unauthorized use of your Account or License Key, you agree to notify us immediately. You are solely responsible for any activities occurring under your Account. You have no ownership right to your Account. If you are registering an Account on behalf of an organization under an agreement between us and another organization, that organization may have administrator rights to access your account and any information provided under your Account. If the terms of your Account or subscription grant access to the Services to a certain number of persons (each an "Authorized User"), you represent and warrant that only Authorized Users shall have access to the Services. These Terms will apply to each Authorized User, and a breach of these Terms by an Authorized User will entitle us to terminate your Account with no refund due to you for any prepaid fees.</p>
                         </section>
 
@@ -156,7 +156,7 @@ export default function TermsPage() {
 
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 9 - PAID SERVICES & REFUNDS</h2>
-                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders. Lemon Squeezy provides all customer service inquiries related to payments and handles secure transactions. Because we provide a fully functional 14-day free trial to allow you to evaluate the Software, all sales are final. We do not offer refunds once a License Key has been purchased and activated on your device, except where explicitly required by mandatory local laws.</p>
+                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders. Lemon Squeezy provides all customer service inquiries related to payments and handles secure transactions. Because we provide a fully functional 7-day free trial to allow you to evaluate the Software, all sales are final. We do not offer refunds once a License Key has been purchased and activated on your device, except where explicitly required by mandatory local laws.</p>
                         </section>
 
                         <section>
@@ -182,7 +182,7 @@ export default function TermsPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 14 - MISCELLANEOUS</h2>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 7 - MISCELLANEOUS</h2>
                             <p>We may assign, transfer, delegate, or otherwise hypothecate our rights under these Terms in our sole discretion. If we fail to enforce a provision of these Terms, you agree that such a failure does not constitute a waiver to enforce the provision (or any other provision hereunder). If any provision of these Terms is held or made invalid, the invalidity does not affect the remainder of these Terms. We reserve all rights not expressly granted in these Terms and disclaim all implied licenses.</p>
                         </section>
 

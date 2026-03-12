@@ -117,7 +117,7 @@ const docsContent = {
                 content: (
                     <>
                         <p className="text-zinc-400 mb-4">
-                            Al primo avvio, ti verrà richiesto di accettare l'EULA. Subito dopo entrerai in <strong>Modalità Trial (14 Giorni)</strong> con tutte le funzionalità PRO sbloccate.
+                            Al primo avvio, ti verrà richiesto di accettare l'EULA. Subito dopo entrerai in <strong>Modalità Trial (7 Giorni)</strong> con tutte le funzionalità PRO sbloccate.
                         </p>
                         <GifPlaceholder title="Attivazione Licenza" height="h-72" />
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">Come inserire la chiave</h3>
@@ -376,7 +376,7 @@ const docsContent = {
                 content: (
                     <>
                         <p className="text-zinc-400 mb-4">
-                            On your first launch, you will be asked to accept the EULA. Immediately after, you will enter the <strong>14-Day Trial Mode</strong> with all PRO features unlocked.
+                            On your first launch, you will be asked to accept the EULA. Immediately after, you will enter the <strong>7-Day Trial Mode</strong> with all PRO features unlocked.
                         </p>
                         <GifPlaceholder title="License Activation" height="h-72" />
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">How to insert your key</h3>
@@ -654,8 +654,8 @@ export default function DocsPage() {
                                     key={item.id}
                                     onClick={() => handleScrollTo(item.id)}
                                     className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${activeSection === item.id
-                                            ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.1)]'
-                                            : 'text-zinc-400 hover:bg-white/5 hover:text-white border border-transparent'
+                                        ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.1)]'
+                                        : 'text-zinc-400 hover:bg-white/5 hover:text-white border border-transparent'
                                         }`}
                                 >
                                     {item.label}
