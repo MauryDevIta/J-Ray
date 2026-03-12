@@ -23,6 +23,7 @@ const CodeBlock = ({ code, language = "json" }: { code: string, language?: strin
     </div>
 );
 
+/*
 const GifPlaceholder = ({ title, height = "h-64" }: { title: string, height?: string }) => (
     <div className={`relative w-full ${height} mt-6 mb-10 rounded-2xl border-2 border-dashed border-indigo-500/30 bg-indigo-500/5 flex flex-col items-center justify-center overflow-hidden group`}>
         <div className="absolute inset-0 bg-grid opacity-20 group-hover:opacity-40 transition-opacity"></div>
@@ -33,6 +34,7 @@ const GifPlaceholder = ({ title, height = "h-64" }: { title: string, height?: st
         </span>
     </div>
 );
+*/
 
 const Alert = ({ title, children, type = "info" }: { title: string, children: React.ReactNode, type?: "info" | "warning" | "success" }) => {
     const colors = {
@@ -119,7 +121,7 @@ const docsContent = {
                         <p className="text-zinc-400 mb-4">
                             Al primo avvio, ti verrà richiesto di accettare l'EULA. Subito dopo entrerai in <strong>Modalità Trial (7 Giorni)</strong> con tutte le funzionalità PRO sbloccate.
                         </p>
-                        <GifPlaceholder title="Attivazione Licenza" height="h-72" />
+                        {/* <GifPlaceholder title="Attivazione Licenza" height="h-72" /> */}
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">Come inserire la chiave</h3>
                         <ol className="list-decimal pl-5 space-y-2 text-zinc-400">
                             <li>Clicca sul pulsante <strong>"J-RAY PRO"</strong> in alto a sinistra nella barra dei menu.</li>
@@ -145,7 +147,7 @@ const docsContent = {
                             <li><strong>Zoom:</strong> Usa la rotellina del mouse. Lo zoom è centrato sul cursore.</li>
                             <li><strong>Drag & Drop:</strong> Trascina l'intestazione di un nodo specifico per riorganizzare la mappa a tuo piacimento.</li>
                         </ul>
-                        <GifPlaceholder title="Navigazione del Grafo e Minimappa" />
+                        {/* <GifPlaceholder title="Navigazione del Grafo e Minimappa" /> */}
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">La Minimappa</h3>
                         <p className="text-zinc-400">
                             In basso a destra trovi il Radar Minimappa. Il rettangolo bianco mostra l'area attualmente visibile sullo schermo. Clicca ovunque sulla minimappa per teletrasportarti istantaneamente in quel punto del JSON.
@@ -164,7 +166,7 @@ const docsContent = {
                         <p className="text-zinc-400 mb-6">
                             Quando il motore rileva una stringa che somiglia a un Token JWT o a un pacchetto Base64 (lunghezza eccessiva, niente spazi, pattern specifici), farà comparire un pulsante rosso a forma di <strong>Lucchetto 🔓</strong> direttamente sul nodo.
                         </p>
-                        <GifPlaceholder title="Uso dell'X-Ray Decrypter" />
+                        {/* <GifPlaceholder title="Uso dell'X-Ray Decrypter" /> */}
                         <p className="text-zinc-400 mt-4">
                             Cliccando sul lucchetto, J-RAY decripterà la stringa offline e aprirà una finestra modale fluttuante mostrandoti il Payload JSON nascosto al suo interno.
                         </p>
@@ -181,7 +183,7 @@ const docsContent = {
                         <Alert title="Come funziona" type="info">
                             Invece di renderizzare 10.000 nodi contemporaneamente, il motore ne disegna solo i primi 5 (per darti il contesto) e comprime tutti gli altri in una "Carta Pila" fucsia.
                         </Alert>
-                        <GifPlaceholder title="Espansione Smart Stack" height="h-56" />
+                        {/* <GifPlaceholder title="Espansione Smart Stack" height="h-56" /> */}
                         <p className="text-zinc-400 mt-4">
                             Cliccando sul simbolo <strong>[+50]</strong> situato a destra del nodo Stack, il motore "spacchetterà" dinamicamente i successivi 50 elementi nell'interfaccia, mantenendo l'app sempre a 60 FPS stabili.
                         </p>
@@ -201,7 +203,7 @@ const docsContent = {
                             <li>Imposta l'intervallo di aggiornamento tramite lo slider (da 0.5 a 10 secondi).</li>
                             <li>Clicca sul tasto verde <strong>▶ LIVE</strong>.</li>
                         </ol>
-                        <GifPlaceholder title="Radar API in azione" />
+                        {/* <GifPlaceholder title="Radar API in azione" /> */}
                         <Alert title="Integrazione Diff" type="success">
                             Se attivi il Radar mentre sei in modalità <em>Visual Diff</em>, l'engine catturerà lo snapshot precedente e lo confronterà con il nuovo pacchetto live ogni X secondi, illuminando il grafo come un vero radar!
                         </Alert>
@@ -235,7 +237,7 @@ const docsContent = {
                                 <span className="text-zinc-300"><strong>Indigo (Invariato):</strong> Nessuna modifica strutturale.</span>
                             </li>
                         </ul>
-                        <GifPlaceholder title="Comparazione Visual Diff" />
+                        {/* <GifPlaceholder title="Comparazione Visual Diff" /> */}
                         <p className="text-zinc-400">
                             Per utilizzarlo, carica il vecchio JSON cliccando su <em>File A</em>, carica il nuovo JSON cliccando su <em>File B</em>, e poi premi <strong>⚖️ Visual Diff</strong> nella navbar.
                         </p>
@@ -258,7 +260,7 @@ const docsContent = {
                             <li>Segnala campi che presentano tipi di dati incoerenti (es. <em>"Il campo 'age' è Numero in 90 oggetti, ma è Stringa in 10 oggetti"</em>).</li>
                             <li>Calcola la percentuale di campi Vuoti, Null o stringhe bianche.</li>
                         </ul>
-                        <GifPlaceholder title="Finestra Report Profiler" height="h-60" />
+                        {/* <GifPlaceholder title="Finestra Report Profiler" height="h-60" /> */}
                     </>
                 )
             },
@@ -378,7 +380,7 @@ const docsContent = {
                         <p className="text-zinc-400 mb-4">
                             On your first launch, you will be asked to accept the EULA. Immediately after, you will enter the <strong>7-Day Trial Mode</strong> with all PRO features unlocked.
                         </p>
-                        <GifPlaceholder title="License Activation" height="h-72" />
+                        {/* <GifPlaceholder title="License Activation" height="h-72" /> */}
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">How to insert your key</h3>
                         <ol className="list-decimal pl-5 space-y-2 text-zinc-400">
                             <li>Click the <strong>"J-RAY PRO"</strong> button on the top left of the menu bar.</li>
@@ -404,7 +406,7 @@ const docsContent = {
                             <li><strong>Zoom:</strong> Use the mouse scroll wheel. The zoom is centered on your cursor.</li>
                             <li><strong>Drag & Drop:</strong> Drag the header of any node to reorganize the map however you like.</li>
                         </ul>
-                        <GifPlaceholder title="Graph Navigation and Minimap" />
+                        {/* <GifPlaceholder title="Graph Navigation and Minimap" /> */}
                         <h3 className="text-xl font-bold text-white mt-8 mb-4">The Minimap</h3>
                         <p className="text-zinc-400">
                             In the bottom right corner, you will find the Radar Minimap. The white rectangle shows the currently visible screen area. Click anywhere on the minimap to instantly teleport to that section of the JSON.
@@ -423,7 +425,7 @@ const docsContent = {
                         <p className="text-zinc-400 mb-6">
                             When the engine detects a string that looks like a JWT Token or a Base64 package (excessive length, no spaces, specific patterns), a red <strong>Padlock 🔓</strong> button will appear directly on the node.
                         </p>
-                        <GifPlaceholder title="Using X-Ray Decrypter" />
+                        {/* <GifPlaceholder title="Using X-Ray Decrypter" /> */}
                         <p className="text-zinc-400 mt-4">
                             Clicking the padlock will cause J-RAY to decrypt the string offline and open a floating modal window showing you the hidden JSON Payload inside.
                         </p>
@@ -440,7 +442,7 @@ const docsContent = {
                         <Alert title="How it works" type="info">
                             Instead of rendering 10,000 nodes simultaneously, the engine draws only the first 5 (to give you context) and compresses all the others into a pink "Deck Card".
                         </Alert>
-                        <GifPlaceholder title="Smart Stack Expansion" height="h-56" />
+                        {/* <GifPlaceholder title="Smart Stack Expansion" height="h-56" /> */}
                         <p className="text-zinc-400 mt-4">
                             By clicking the <strong>[+50]</strong> symbol located on the right side of the Stack node, the engine will dynamically unpack the next 50 elements into the UI, maintaining a stable 60 FPS.
                         </p>
@@ -460,7 +462,7 @@ const docsContent = {
                             <li>Set the refresh interval using the slider (from 0.5 to 10 seconds).</li>
                             <li>Click the green <strong>▶ LIVE</strong> button.</li>
                         </ol>
-                        <GifPlaceholder title="Radar API in action" />
+                        {/* <GifPlaceholder title="Radar API in action" /> */}
                         <Alert title="Diff Integration" type="success">
                             If you activate the Radar while in <em>Visual Diff</em> mode, the engine will capture the previous snapshot and compare it with the new live payload every X seconds, lighting up the graph like a true radar!
                         </Alert>
@@ -494,7 +496,7 @@ const docsContent = {
                                 <span className="text-zinc-300"><strong>Indigo (Unchanged):</strong> No structural modifications.</span>
                             </li>
                         </ul>
-                        <GifPlaceholder title="Visual Diff Comparison" />
+                        {/* <GifPlaceholder title="Visual Diff Comparison" /> */}
                         <p className="text-zinc-400">
                             To use it, load the old JSON by clicking <em>File A</em>, load the new JSON by clicking <em>File B</em>, and then press <strong>⚖️ Visual Diff</strong> in the navbar.
                         </p>
@@ -517,7 +519,7 @@ const docsContent = {
                             <li>Flags fields with inconsistent data types (e.g., <em>"The field 'age' is a Number in 90 objects, but a String in 10 objects"</em>).</li>
                             <li>Calculates the percentage of Empty, Null, or blank string fields.</li>
                         </ul>
-                        <GifPlaceholder title="Profiler Report Window" height="h-60" />
+                        {/* <GifPlaceholder title="Profiler Report Window" height="h-60" /> */}
                     </>
                 )
             },
