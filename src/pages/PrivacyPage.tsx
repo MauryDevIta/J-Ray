@@ -27,7 +27,7 @@ const translations = {
             },
             {
                 title: "5. Conservazione, Sicurezza e Rimborsi",
-                content: "Conserviamo i dati legati alla tua licenza finché rimane attiva. Essendo un software digitale fornito con Web Demo e periodo di prova di 7 giorni per la valutazione, tutte le vendite sono definitive. Per i consumatori residenti nell'Unione Europea, l'attivazione della chiave comporta la perdita del diritto di recesso di 14 giorni."
+                content: "Conserviamo i dati legati alla tua licenza finché rimane attiva. Essendo un software digitale fornito con Web Demo e periodo di prova di 7 giorni per la valutazione, tutte le vendite sono definitive. Per i consumatori residenti nell'Unione Europea, l'attivazione della chiave comporta la perdita del diritto di recesso di 7 giorni."
             },
             {
                 title: "6. I tuoi Diritti (GDPR & CCPA)",
@@ -61,7 +61,7 @@ const translations = {
             },
             {
                 title: "5. Data Retention, Security, and Refunds",
-                content: "We retain your license data while your license is active. Because we provide a fully functional Web Demo and a 7-day free trial to evaluate the Software, all sales are final. For EU consumers, activating the License Key expressly waives your 14-day right of withdrawal."
+                content: "We retain your license data while your license is active. Because we provide a fully functional Web Demo and a 7-day free trial to evaluate the Software, all sales are final. For EU consumers, activating the License Key expressly waives your 7-day right of withdrawal."
             },
             {
                 title: "6. Your Rights (GDPR & CCPA)",
