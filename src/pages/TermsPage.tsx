@@ -156,7 +156,7 @@ export default function TermsPage() {
 
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 9 - PAID SERVICES & REFUNDS</h2>
-                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders and handles secure transactions and local taxes. Because we provide a fully functional 7-day free trial to allow you to evaluate the Software prior to purchase, all sales are final. For consumers residing in the European Union, by activating the License Key and unlocking the digital content, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 14-day right of withdrawal.</p>
+                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders and handles secure transactions and local taxes. Because we provide a fully functional 7-day free trial to allow you to evaluate the Software prior to purchase, all sales are final. For consumers residing in the European Union, by activating the License Key and unlocking the digital content, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 7-day right of withdrawal.</p>
                         </section>
 
                         <section>
