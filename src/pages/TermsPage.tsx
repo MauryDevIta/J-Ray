@@ -81,7 +81,7 @@ export default function TermsPage() {
                         TERMS OF <span className="text-indigo-500">SERVICE</span>
                     </h1>
                     <p className="font-mono text-zinc-500 text-xs mt-4 tracking-widest uppercase">
-                        LAST_UPDATED: [ FEBRUARY 2026 ]
+                        LAST_UPDATED: [ MARCH 2026 ]
                     </p>
                 </motion.div>
             </header>
@@ -99,10 +99,10 @@ export default function TermsPage() {
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">OVERVIEW</h2>
                             <p className="mb-4">
-                                Please read these Terms of Service carefully before accessing or using our website. Throughout the site and other platforms (the "Site" and the "Services"), the terms "we", "us" and "our" refer to J-RAY PRO. J-RAY PRO offers this website and the applications, including all information, tools and services available from us. By accessing or using any part of the site and services, you agree to be bound by these Terms of Service ("Terms", "Terms and Conditions").
+                                Please read these Terms of Service carefully before accessing or using our website, software, and online tools. Throughout the site and other platforms (the "Site", the "Web Console", and the "Services"), the terms "we", "us" and "our" refer to J-RAY PRO. J-RAY PRO offers this website, the interactive Web Console (Online Demo), and the downloadable desktop applications. By accessing or using any part of the site and services, you agree to be bound by these Terms of Service.
                             </p>
                             <p>
-                                These Terms of Service apply to all users of the site and the services. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
+                                These Terms of Service apply to all users of the site and the services.
                             </p>
                         </section>
 
@@ -130,8 +130,8 @@ export default function TermsPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 4 - USE OF THE SERVICES</h2>
-                            <p>Some of the Services may be used to develop, manage, parse and debug JSON data, APIs, and encoded tokens ("Data"). You may only use the Services to develop, manage, and support Data that you control or which you have been legally granted access to. You acknowledge and agree that your use of the Services can affect your Data, and you accept sole responsibility for any errors, malfunctions, or corruption of any Data caused by your use of the Services. You are responsible for securing and backing up your Data and any other User Content (as hereinafter defined) you post to the Services, as well as keeping your decrypted tokens safe from unauthorized viewing; as such, we have no responsibility or liability for the deletion of or failure to store any User Content on the Services.</p>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 4 - USE OF THE SERVICES & WEB CONSOLE</h2>
+                            <p>Some of the Services, including the browser-based Web Console and the Desktop Application, may be used to develop, manage, parse and debug JSON data, APIs, and encoded tokens ("Data"). You acknowledge and agree that the Web Console operates entirely client-side within your browser for demonstration and utility purposes. You accept sole responsibility for any errors, browser crashes, or memory overloads caused by pasting massive Data payloads into the Web Console. You are responsible for securing and backing up your Data; as the processing is strictly local, we have no capability, responsibility, or liability to recover any lost User Content or JSON structures.</p>
                         </section>
 
                         <section>
@@ -156,7 +156,7 @@ export default function TermsPage() {
 
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 9 - PAID SERVICES & REFUNDS</h2>
-                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders. Lemon Squeezy provides all customer service inquiries related to payments and handles secure transactions. Because we provide a fully functional 7-day free trial to allow you to evaluate the Software, all sales are final. We do not offer refunds once a License Key has been purchased and activated on your device, except where explicitly required by mandatory local laws.</p>
+                            <p>Our order process is conducted by our online reseller Lemon Squeezy. Lemon Squeezy is the Merchant of Record for all our orders and handles secure transactions and local taxes. Because we provide a fully functional 7-day free trial to allow you to evaluate the Software prior to purchase, all sales are final. For consumers residing in the European Union, by activating the License Key and unlocking the digital content, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 14-day right of withdrawal.</p>
                         </section>
 
                         <section>
@@ -166,13 +166,13 @@ export default function TermsPage() {
 
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 11 - WARRANTY DISCLAIMER</h2>
-                            <p>You agree that the Services are available on an "as is" basis, without any warranty, and that you use the Services at your own risk. We disclaim, to the maximum extent permitted by law, any and all warranties, whether express or implied, including, without limitation, (a) warranties of merchantability or fitness for a particular purpose, (b) warranties against infringement of any third party intellectual property or proprietary rights, (c) warranties relating to delays, interruptions, errors, or omissions in the Services or on the Site, (d) warranties relating to the accuracy or correctness of data on the Services, and (e) any other warranties otherwise relating to our performance, nonperformance, or other acts or omissions. We do not warrant that the Site or the Services will operate error-free. Some jurisdictions do not allow the exclusion or limitation of certain categories of damages or implied warranties; therefore, the above limitations may not apply to you. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+                            <p>You agree that the Services are available on an "as is" basis, without any warranty, and that you use the Services at your own risk. We disclaim, to the maximum extent permitted by law, any and all warranties, whether express or implied, including, without limitation, (a) warranties of merchantability or fitness for a particular purpose, (b) warranties against infringement of any third party intellectual property or proprietary rights, (c) warranties relating to delays, interruptions, errors, or omissions in the Services or on the Site, (d) warranties relating to the accuracy or correctness of data on the Services, and (e) any other warranties otherwise relating to our performance, nonperformance, or other acts or omissions. We do not warrant that the Site or the Services will operate error-free. Some jurisdictions do not allow the exclusion or limitation of certain categories of damages or implied warranties; therefore, the above limitations may not apply to you. In jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
                         </section>
 
                         <section>
                             <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 12 - LIMITATION OF LIABILITY</h2>
                             <p className="uppercase text-[13px] leading-relaxed">
-                                IN NO EVENT SHALL J-RAY PRO OR ITS SUPPLIERS, OR ITS RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE WITH RESPECT TO THE WEBSITE OR THE SERVICES OR THE SUBJECT MATTER OF THIS TERMS OF SERVICES UNDER ANY CONTRACT, NEGLIGENCE, TORT, STRICT LIABILITY OR OTHER LEGAL OR EQUITABLE THEORY (I) FOR ANY AMOUNT IN THE AGGREGATE IN EXCESS OF THE GREATER OF $100 OR THE FEES PAID BY YOU FOR THE SERVICES AND ANY PRODUCTS OR SERVICES PURCHASED THROUGH THE SERVICES DURING THE 12-MONTH PERIOD PRECEDING THE APPLICABLE CLAIM; (II) FOR ANY INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEVER; (III) FOR DATA LOSS OR COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; OR (IV) FOR ANY MATTER BEYOND J-RAY PRO'S REASONABLE CONTROL.
+                                TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AND EXCEPT IN CASES OF INTENTIONAL MISCONDUCT OR GROSS NEGLIGENCE, IN NO EVENT SHALL J-RAY PRO OR ITS SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEVER, INCLUDING DATA LOSS OR CORRUPTION. IN NO EVENT SHALL THE TOTAL LIABILITY EXCEED THE GREATER OF $100 OR THE FEES PAID BY YOU FOR THE SERVICES DURING THE 12-MONTH PERIOD PRECEDING THE APPLICABLE CLAIM. YOU ARE SOLELY RESPONSIBLE FOR SECURING AND BACKING UP YOUR DATA BEFORE USING THE SOFTWARE.
                             </p>
                         </section>
 
@@ -182,7 +182,7 @@ export default function TermsPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 7 - MISCELLANEOUS</h2>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 14 - MISCELLANEOUS</h2>
                             <p>We may assign, transfer, delegate, or otherwise hypothecate our rights under these Terms in our sole discretion. If we fail to enforce a provision of these Terms, you agree that such a failure does not constitute a waiver to enforce the provision (or any other provision hereunder). If any provision of these Terms is held or made invalid, the invalidity does not affect the remainder of these Terms. We reserve all rights not expressly granted in these Terms and disclaim all implied licenses.</p>
                         </section>
 
@@ -198,12 +198,12 @@ export default function TermsPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">DATA PROCESSING AND LICENSING:</h2>
-                            <p>J-RAY PRO operates locally. We do not collect, read, or store your JSON data. To prevent piracy, our software generates a unique Hardware ID (Machine ID) which is sent to our payment provider, Lemon Squeezy, exclusively to validate your license key. By entering your license key, you consent to this verification process.</p>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 17 - DATA PROCESSING, PRIVACY AND LICENSING</h2>
+                            <p>J-RAY PRO is a client-side, local-first application. We do not collect, read, transmit, or store your JSON data, API payloads, or decrypted tokens. To prevent piracy, our software generates a Hardware ID (Machine ID) upon license activation. This ID is irreversibly hashed (via SHA-256) locally on your device before being transmitted to our payment provider, Lemon Squeezy, exclusively to validate your license key. We cannot reverse this hash to identify your specific hardware components. By entering your license key, you consent to this standard verification process.</p>
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 17 - CONTACT INFORMATION</h2>
+                            <h2 className="text-xl font-black italic text-white uppercase mb-4 tracking-tight border-b border-white/10 pb-2">SECTION 18 - CONTACT INFORMATION</h2>
                             <p className="mb-2">Questions about the Terms of Service should be sent to us at:</p>
                             <a href="mailto:support@jraypro.com" className="text-indigo-400 hover:text-cyan-400 transition-colors underline decoration-indigo-400/30 underline-offset-4">
                                 support@jraypro.com

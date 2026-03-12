@@ -6,70 +6,70 @@ const translations = {
     it: {
         back: "← TORNA ALLA HOME",
         title: "PRIVACY POLICY",
-        subtitle: "Trasparenza totale. I tuoi dati restano tuoi.",
-        lastUpdated: "Ultimo aggiornamento: Febbraio 2026",
+        subtitle: "Trasparenza totale sia Desktop che Web. I tuoi dati restano tuoi.",
+        lastUpdated: "Ultimo aggiornamento: Marzo 2026",
         sections: [
             {
-                title: "1. Elaborazione Dati Locale (Zero Telemetria)",
-                content: "L'applicazione desktop J-RAY PRO è progettata con la privacy come principio fondamentale. Tutto il parsing, l'analisi (incluso l'AI Profiler) e la decriptazione dei Token avvengono al 100% offline sulla tua macchina locale. Non raccogliamo, analizziamo, trasmettiamo o conserviamo mai i tuoi file JSON, i tuoi dati API o il codice generato. I tuoi dati non lasciano mai il tuo dispositivo."
+                title: "1. Elaborazione Locale (Desktop & Web Console)",
+                content: "Sia l'applicazione desktop J-RAY PRO che la Web Console (Demo Online) sono progettate con la privacy come principio fondamentale. L'app desktop opera al 100% offline. La Web Console elabora i tuoi dati JSON e i calcoli del grafo interamente all'interno della memoria del tuo browser (client-side). Non carichiamo, raccogliamo, analizziamo, trasmettiamo o conserviamo MAI i tuoi file JSON, payload API o segreti sui nostri server. Ciò che accade sul tuo schermo, resta sul tuo schermo."
             },
             {
                 title: "2. Quali dati raccogliamo e perché",
-                content: "Raccogliamo solo il minimo indispensabile per fornirti il servizio e prevenire la pirateria:\n\n• Dati di Licenza: Quando acquisti una licenza, riceviamo il tuo indirizzo email, il nome e l'ID dell'ordine. Non abbiamo mai accesso ai dettagli della tua carta di credito.\n• Hardware ID (Machine ID): Per far rispettare i limiti di utilizzo e prevenire frodi, J-RAY PRO genera un hash univoco e anonimizzato basato sull'hardware del tuo computer. Questo ID viene inviato ai nostri server di licenza esclusivamente per validare l'attivazione. Non può essere usato per tracciare la tua identità fisica."
+                content: "Raccogliamo solo il minimo indispensabile per fornirti il servizio, gestire l'assistenza e prevenire la pirateria:\n\n• Dati di Acquisto: Quando acquisti una licenza, riceviamo dal nostro gestore pagamenti il tuo indirizzo email, il nome fornito e l'ID dell'ordine. Non abbiamo mai accesso ai dettagli della tua carta di credito.\n• Hardware ID (Machine ID) e Hashing: Per far rispettare i limiti di utilizzo dell'App Desktop, J-RAY PRO genera un ID basato sull'hardware. Per la tua privacy, questo ID viene convertito in un hash crittografico (SHA-256) a livello locale *prima* di essere inviato ai nostri server. Tale hash viene utilizzato esclusivamente per validare la licenza."
             },
             {
                 title: "3. Servizi di Terze Parti (Merchant of Record)",
-                content: "Utilizziamo Lemon Squeezy, LLC come nostro Merchant of Record (MoR) ufficiale. Tutte le transazioni, l'elaborazione dei pagamenti, la conformità fiscale e la generazione delle chiavi di licenza sono gestite in modo sicuro da loro. Acquistando J-RAY PRO, accetti la Privacy Policy di Lemon Squeezy. Il nostro sito web è ospitato su un'infrastruttura sicura (es. Vercel/Aruba) che può raccogliere log di server standard (come indirizzi IP temporanei) per ragioni di sicurezza e prevenzione DDoS."
+                content: "Utilizziamo Lemon Squeezy, LLC come nostro Merchant of Record (MoR) ufficiale. Tutte le transazioni e la generazione delle chiavi sono gestite da loro. Il nostro sito web e la Web Console sono ospitati su infrastrutture sicure (es. Cloudflare) che possono raccogliere log di server standard (come indirizzi IP temporanei) unicamente per ragioni di sicurezza e prevenzione DDoS."
             },
             {
                 title: "4. Cookie e Tracciamento",
-                content: "Odiamo il tracciamento invasivo quanto te. Il nostro sito web pubblico (jraypro.com) utilizza esclusivamente cookie tecnici strettamente necessari al funzionamento della piattaforma. Non utilizziamo script pubblicitari di terze parti, pixel di Facebook o Google Analytics per tracciarti su altri siti web."
+                content: "Il nostro sito e la Web Console utilizzano esclusivamente cookie tecnici e il LocalStorage del browser strettamente necessari al funzionamento della piattaforma (es. gestire l'autenticazione o salvare le preferenze UI). Non utilizziamo script pubblicitari di terze parti o pixel di tracciamento."
             },
             {
-                title: "5. Conservazione e Sicurezza dei Dati",
-                content: "Conserviamo i dati legati alla tua licenza (email e chiavi di attivazione) per tutto il tempo in cui la tua licenza rimane attiva, al fine di garantirti supporto tecnico e aggiornamenti. Adottiamo misure di sicurezza standard del settore per proteggere questi dati da accessi non autorizzati."
+                title: "5. Conservazione, Sicurezza e Rimborsi",
+                content: "Conserviamo i dati legati alla tua licenza finché rimane attiva. Essendo un software digitale fornito con Web Demo e periodo di prova di 7 giorni per la valutazione, tutte le vendite sono definitive. Per i consumatori residenti nell'Unione Europea, l'attivazione della chiave comporta la perdita del diritto di recesso di 14 giorni."
             },
             {
                 title: "6. I tuoi Diritti (GDPR & CCPA)",
-                content: "In conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR) e leggi affini, hai il diritto di:\n• Richiedere l'accesso ai dati personali in nostro possesso.\n• Richiedere la correzione di dati errati.\n• Richiedere la cancellazione dei tuoi dati (Diritto all'oblio). Nota: richiedere la cancellazione permanente revocherà irreversibilmente la tua chiave di licenza senza diritto a rimborso.\n\nPer esercitare i tuoi diritti, contattaci all'indirizzo email fornito di seguito."
+                content: "Hai il diritto di richiedere l'accesso, la correzione o la cancellazione dei dati legati alla tua licenza in nostro possesso. Nota: la cancellazione comporterà la revoca della chiave di licenza senza rimborso.\n\nPer esercitare i tuoi diritti, contattaci all'indirizzo email fornito di seguito."
             }
         ],
         contact: "Hai domande sulla privacy? Contattaci a:",
-        email: "privacy@jraypro.com" // 📝 INSERISCI QUI LA TUA EMAIL
+        email: "support@jraypro.com"
     },
     en: {
         back: "← BACK TO HOME",
         title: "PRIVACY POLICY",
-        subtitle: "Total transparency. Your data remains yours.",
-        lastUpdated: "Last updated: February 2026",
+        subtitle: "Total transparency across Desktop & Web. Your data remains yours.",
+        lastUpdated: "Last updated: March 2026",
         sections: [
             {
-                title: "1. Local Data Processing (Zero Telemetry)",
-                content: "The J-RAY PRO desktop application is designed with privacy at its core. All parsing, analyzing (including the AI Profiler), and Token decryption happen 100% offline on your local machine. We never collect, analyze, transmit, or store your JSON files, API data, or generated code. Your data never leaves your device."
+                title: "1. Local Data Processing (Desktop & Web Console)",
+                content: "Both the J-RAY PRO desktop application and the Web Console (Online Demo) are designed with absolute privacy in mind. The Desktop app runs 100% offline. The Web Console processes your JSON data and graph calculations entirely within your browser's local memory (client-side). We NEVER upload, collect, analyze, transmit, or store your JSON files, API payloads, or secrets on our servers. What happens on your screen, stays on your screen."
             },
             {
                 title: "2. What Data We Collect and Why",
-                content: "We collect only the bare minimum necessary to provide you with the service and prevent software piracy:\n\n• License Data: When you purchase a license, we receive your email address, name, and order ID. We never have access to your credit card details.\n• Hardware ID (Machine ID): To enforce device limits and prevent fraud, J-RAY PRO generates a unique, anonymized hash based on your computer's hardware. This ID is transmitted to our licensing servers strictly to validate your activation. It cannot be used to track your physical identity."
+                content: "We collect only the bare minimum necessary for operations and piracy prevention:\n\n• Purchase Data: When buying a license, we receive your email and order ID from our payment provider. We never see your credit card.\n• Hardware ID (Machine ID) & Hashing: To enforce device limits for the Desktop App, J-RAY PRO generates an ID based on your hardware. For your privacy, this is converted into a one-way hash (SHA-256) locally *before* reaching our servers. This hashed ID is used strictly to validate your license."
             },
             {
                 title: "3. Third-Party Services (Merchant of Record)",
-                content: "We use Lemon Squeezy, LLC as our official Merchant of Record (MoR). All transactions, payment processing, tax compliance, and license key generation are securely handled by them. By purchasing J-RAY PRO, you agree to Lemon Squeezy's Privacy Policy. Our website is hosted on secure infrastructure (e.g., Vercel/Aruba) which may collect standard server logs (such as temporary IP addresses) for security and DDoS prevention."
+                content: "We use Lemon Squeezy, LLC as our official Merchant of Record (MoR). All transactions and key generation are securely handled by them. Our website and Web Console are hosted on secure infrastructure (e.g., Cloudflare) which may collect standard server logs (such as temporary IP addresses) solely for DDoS prevention and routing."
             },
             {
                 title: "4. Cookies and Tracking",
-                content: "We hate invasive tracking as much as you do. Our public website (jraypro.com) uses only essential technical cookies necessary for the platform to function. We do not use third-party advertising scripts, Facebook Pixels, or Google Analytics to track you across the web."
+                content: "Our website and Web Console use only essential technical cookies and browser LocalStorage necessary for the platform to function (e.g., authentication, UI preferences). We do not use third-party advertising scripts or tracking pixels."
             },
             {
-                title: "5. Data Retention and Security",
-                content: "We retain your license-related data (email and activation keys) for as long as your license is active in order to provide technical support and software updates. We implement industry-standard security measures to protect this data from unauthorized access."
+                title: "5. Data Retention, Security, and Refunds",
+                content: "We retain your license data while your license is active. Because we provide a fully functional Web Demo and a 7-day free trial to evaluate the Software, all sales are final. For EU consumers, activating the License Key expressly waives your 14-day right of withdrawal."
             },
             {
                 title: "6. Your Rights (GDPR & CCPA)",
-                content: "In accordance with the General Data Protection Regulation (GDPR) and similar laws, you have the right to:\n• Request access to the personal data we hold about you.\n• Request correction of incorrect data.\n• Request deletion of your data (Right to be forgotten). Note: Requesting permanent deletion will irreversibly revoke your license key without a refund.\n\nTo exercise your rights, please contact us at the email address provided below."
+                content: "You have the right to access, correct, or request deletion of your license data. Note: Deletion will irreversibly revoke your license key without a refund.\n\nTo exercise your rights, please contact us at the email below."
             }
         ],
         contact: "Questions about privacy? Contact us at:",
-        email: "privacy@jraypro.com" // 📝 INSERISCI QUI LA TUA EMAIL
+        email: "support@jraypro.com"
     }
 };
 

@@ -121,13 +121,8 @@ const translations = {
         feedback: {
             title: "INVIA IL TUO",
             subtitle: "FEEDBACK",
-            desc: "Bug report? Richieste per nuove feature? Lascia un messaggio ai sistemi centrali. Leggiamo tutto.",
-            email_ph: "Tua Email (opzionale per ricevere risposte)",
-            msg_ph: "Scrivi il tuo messaggio qui...",
-            btn_idle: "TRASMETTI DATI 🚀",
-            btn_sending: "TRASMISSIONE...",
-            success: "Ricevuto! Grazie per il supporto. 📡",
-            error: "Errore di trasmissione. Riprova più tardi."
+            desc: "Bug report? Richieste per nuove feature? Apri una issue sul nostro repository GitHub ufficiale.",
+            btn: "APRI UNA ISSUE SU GITHUB 🚀"
         },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     },
@@ -196,13 +191,8 @@ const translations = {
         feedback: {
             title: "SEND YOUR",
             subtitle: "FEEDBACK",
-            desc: "Found a bug? Have a feature request? Leave a message to the central systems. We read everything.",
-            email_ph: "Your Email (optional, if you want a reply)",
-            msg_ph: "Type your message here...",
-            btn_idle: "TRANSMIT DATA 🚀",
-            btn_sending: "TRANSMITTING...",
-            success: "Received! Thank you for the support. 📡",
-            error: "Transmission error. Try again later."
+            desc: "Found a bug? Have a feature request? Open an issue on our official GitHub repository.",
+            btn: "OPEN AN ISSUE ON GITHUB 🚀"
         },
         footer: "© 2026 J-RAY Systems // All systems nominal"
     }
@@ -214,11 +204,7 @@ export default function LandingPage() {
     const [demoStep, setDemoStep] = useState(0);
     const [session, setSession] = useState<any>(null);
 
-    // Gestione Feedback
-    const [feedbackMsg, setFeedbackMsg] = useState('');
-    const [feedbackEmail, setFeedbackEmail] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    // Feedback state removed
 
     const { lang, setLang } = useLanguage();
     const navigate = useNavigate();
@@ -239,30 +225,7 @@ export default function LandingPage() {
         navigate('/');
     };
 
-    const submitFeedback = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!feedbackMsg.trim()) return;
-
-        setIsSubmitting(true);
-        setSubmitStatus('idle');
-
-        const { error } = await supabase
-            .from('feedback')
-            .insert([{ message: feedbackMsg, user_email: feedbackEmail || null }]);
-
-        setIsSubmitting(false);
-
-        if (error) {
-            console.error("Feedback error:", error);
-            setSubmitStatus('error');
-        } else {
-            setSubmitStatus('success');
-            setFeedbackMsg('');
-            setFeedbackEmail('');
-            // Nasconde il messaggio di successo dopo 5 secondi
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
-    };
+    // Feedback handler removed
 
     useEffect(() => {
         const handleMouse = (e: MouseEvent) => {
@@ -275,7 +238,7 @@ export default function LandingPage() {
 
     // Timer per l'animazione SVG
     useEffect(() => {
-        let timeout: NodeJS.Timeout;
+        let timeout: ReturnType<typeof setTimeout>;
         if (demoStep === 4) {
             timeout = setTimeout(() => { setDemoStep(0); }, 2500);
         } else {
@@ -639,46 +602,16 @@ export default function LandingPage() {
                         <p className="text-zinc-400 text-sm">{t.feedback.desc}</p>
                     </div>
 
-                    <form onSubmit={submitFeedback} className="relative z-10 flex flex-col gap-4">
-                        <input
-                            type="email"
-                            placeholder={t.feedback.email_ph}
-                            value={feedbackEmail}
-                            onChange={(e) => setFeedbackEmail(e.target.value)}
-                            className="bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all font-mono text-sm placeholder:text-zinc-600 w-full"
-                        />
-                        <textarea
-                            required
-                            rows={4}
-                            placeholder={t.feedback.msg_ph}
-                            value={feedbackMsg}
-                            onChange={(e) => setFeedbackMsg(e.target.value)}
-                            className="bg-black/50 border border-white/10 rounded-xl p-4 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all font-mono text-sm placeholder:text-zinc-600 w-full resize-none"
-                        ></textarea>
-
-                        <div className="mt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className={`w-full sm:w-auto px-8 py-4 rounded-xl font-black italic tracking-wide transition-all shadow-[0_0_20px_rgba(79,70,229,0.2)] ${isSubmitting ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-500 text-white hover:scale-105'}`}
-                            >
-                                {isSubmitting ? t.feedback.btn_sending : t.feedback.btn_idle}
-                            </button>
-
-                            <AnimatePresence mode="wait">
-                                {submitStatus === 'success' && (
-                                    <motion.span initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }} className="text-green-400 text-sm font-bold tracking-wide">
-                                        {t.feedback.success}
-                                    </motion.span>
-                                )}
-                                {submitStatus === 'error' && (
-                                    <motion.span initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }} className="text-red-400 text-sm font-bold tracking-wide">
-                                        {t.feedback.error}
-                                    </motion.span>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    </form>
+                    <div className="relative z-10 flex justify-start sm:justify-center mt-6">
+                        <a
+                            href="https://github.com/MauryDevIta/j-ray-releases"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-black italic tracking-wide transition-all shadow-[0_0_20px_rgba(79,70,229,0.2)] hover:scale-105 inline-block text-center w-full sm:w-auto"
+                        >
+                            {t.feedback.btn}
+                        </a>
+                    </div>
                 </motion.div>
             </section>
 
