@@ -35,7 +35,7 @@ const translations = {
             }
         ],
         contact: "Hai domande sulla privacy? Contattaci a:",
-        email: "support@jraypro.com"
+        email: "support@j-ray-pro.com"
     },
     en: {
         back: "← BACK TO HOME",
@@ -69,7 +69,7 @@ const translations = {
             }
         ],
         contact: "Questions about privacy? Contact us at:",
-        email: "support@jraypro.com"
+        email: "support@j-ray-pro.com"
     }
 };
 
