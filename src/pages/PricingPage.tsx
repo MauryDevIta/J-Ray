@@ -16,7 +16,7 @@ const translations = {
             personal: {
                 name: "PERSONAL",
                 desc: "Per sviluppatori individuali che vogliono dominare i JSON.",
-                price: "€29",
+                price: "5",
                 devices: "Valida per 1 dispositivo",
                 features: [
                     "Motore Rendering Nativo (Rust)",
@@ -31,7 +31,7 @@ const translations = {
                 name: "PRO",
                 badge: "CONSIGLIATO",
                 desc: "La suite definitiva per data analyst e architetti del software.",
-                price: "€49",
+                price: "10",
                 devices: "Valida per 2 dispositivi",
                 includes: "Tutto quello in Personal, più:",
                 features: [
@@ -73,7 +73,7 @@ const translations = {
             personal: {
                 name: "PERSONAL",
                 desc: "For individual developers who want to tame JSON chaos.",
-                price: "$29",
+                price: "€5",
                 devices: "Valid for 1 device",
                 features: [
                     "Native Rendering Engine (Rust)",
@@ -88,7 +88,7 @@ const translations = {
                 name: "PRO",
                 badge: "RECOMMENDED",
                 desc: "The ultimate suite for data analysts and software architects.",
-                price: "$49",
+                price: "€10",
                 devices: "Valid for 2 devices",
                 includes: "Everything in Personal, plus:",
                 features: [
